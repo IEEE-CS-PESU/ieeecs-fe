@@ -52,7 +52,7 @@ const About = () => {
               <div className="font-bold mb-6 text-3xl md:text-5xl">
                 Computer Society
               </div>
-              <p className="text-gray-700 md:text-[20px] text-[18px] font-[Helvetica] md:leading-9 text-center">
+              <p className="text-gray-700 md:text-[20px] text-[15px] font-[Helvetica] md:leading-9 text-center">
                 <span>
                   <FontAwesomeIcon
                     icon={faAngleRight}
@@ -73,7 +73,7 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="md:basis-3/5 basis-1/2 grid place-items-center text-7xl md:text-9xl text-[#f8a219]">
+        <div className="md:basis-3/5 basis-1/2 grid place-items-center text-9xl md:text-9xl text-[#f8a219]">
           <DogModel />
         </div>
       </div>

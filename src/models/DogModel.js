@@ -5,27 +5,32 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { Suspense, useRef } from "react";
 
 const Model = () => {
+  const mesh = useRef(null);
+  useFrame(() => (mesh.current.rotation.y = mesh.current.rotation.y += 0.006));
+  const gltf = useLoader(GLTFLoader, "./assets/dog.glb");
+  return (
+    <>
+      <primitive
+        ref={mesh}
+        object={gltf.scene}
+        scale={1}
+        position={[0, -1, 0]}
+      />
+    </>
+  );
+};
 
-    const mesh = useRef(null)
-    useFrame(()=>(mesh.current.rotation.y = mesh.current.rotation.y += 0.006))
-    const gltf = useLoader(GLTFLoader, "./assets/dog.glb");
-    return (
-      <>
-        <primitive ref={mesh} object={gltf.scene} scale={1} position={[0,-1,0]} />
-      </>
-    );
-  };
-  
-  export default function DogModel() {
-    return (
-        <Canvas camera={{position:[5,5,6], fov:70}}>
-          <ambientLight intensity={0.9} />
-          <Suspense fallback={null}>
-            <Model />
-            {/* <OrbitControls enableZoom={false} enableRotate={false} enablePan={false}/> */}
-            {/* <Environment preset="sunset" background /> */}
-          </Suspense>
-        </Canvas>
-    );
-  }
-  
+export default function DogModel() {
+  return (
+    <div className="h-[550px] w-full md:h-full">
+      <Canvas camera={{ position: [5, 5, 6], fov: 70 }}>
+        <ambientLight intensity={0.9} />
+        <Suspense fallback={null}>
+          <Model />
+          {/* <OrbitControls enableZoom={false} enableRotate={false} enablePan={false}/> */}
+          {/* <Environment preset="sunset" background /> */}
+        </Suspense>
+      </Canvas>
+    </div>
+  );
+}
