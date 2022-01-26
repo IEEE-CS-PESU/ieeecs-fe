@@ -1,14 +1,14 @@
 import React from "react";
 
 const TeamCard = (props) => {
-    const dr = 'https://drive.google.com/uc?export=view&id='
+    const dr = 'https://drive.google.com/uc?export=view&id='+props.data.img
   return (
     <>
       <div className="w-full bg-white rounded-lg sahdow-lg overflow-hidden flex flex-col justify-center items-center">
         <div>
           <img
             className="object-center object-fill h-72 w-96"
-            src={`${dr}${props.data.img}`}
+            src={dr}
             alt="v"
             referrerpolicy="no-referrer"
           ></img>

@@ -80,7 +80,7 @@ export const TeamDetails = [
         role:'Operations Team'
     },
     {
-        name:'Shauryadeepsinh G Raolji ',
+        name:'Shauryadeepsinh G Raolji',
         email:'raoljishauryadeep@gmail.com',
         linedin:'https://www.linkedin.com/in/shauryadeepsinh-g-raolji-299225203',
         img:m,

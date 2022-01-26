@@ -13,28 +13,13 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
-  
-
-background:#202023;
+  background: #202023;
 }
 
-/* 
-#root{
-  background-image: url("wall1.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-right: 200px;
-  background-size: cover;
-  background-attachment: fixed;
-  
-} */
-
-.eve{
-  background-image: url("wall1.jpg");
+.eve {
+  background-image: url("images/wall1.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
 }
-
-
