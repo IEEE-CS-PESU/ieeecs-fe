@@ -1,7 +1,7 @@
 import React from "react";
 
 const TeamCard = (props) => {
-    const dr = 'https://drive.google.com/uc?id='
+    const dr = 'https://drive.google.com/uc?export=view&id='
   return (
     <>
       <div className="w-full bg-white rounded-lg sahdow-lg overflow-hidden flex flex-col justify-center items-center">
