@@ -14,6 +14,7 @@ import sak from './teamPhotos/Shreyas A Katti.jpg'
 import sb from './teamPhotos/Shreesh Bajpai.jpg'
 import akb from './teamPhotos/Akshay K B.jpg'
 import dr from './teamPhotos/Divyansh Raina.jpg'
+
 export const TeamDetails = [
     {
         name:'Muskan Kothari',
@@ -51,7 +52,7 @@ export const TeamDetails = [
         role:'Events Team'
     },
     {
-        name:'Sriram Radhakrishna',
+        name:'Sriram R',
         email:'sriram.radhakrishna42@gmail.com',
         linedin:'https://www.linkedin.com/in/sriram-radhakrishna-665885207/',
         img:sr,
@@ -93,7 +94,7 @@ export const TeamDetails = [
         role:'Operations Team'
     },
     {
-        name:'Shauryadeepsinh G Raolji',
+        name:'Shauryadeepsinh',
         email:'raoljishauryadeep@gmail.com',
         linedin:'https://www.linkedin.com/in/shauryadeepsinh-g-raolji-299225203',
         img:sgr,
