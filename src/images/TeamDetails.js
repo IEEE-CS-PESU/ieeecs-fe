@@ -1,5 +1,4 @@
 import fe from './teamPhotos/fe.jpg'
-import m from './teamPhotos/m.jpg'
 import mk from './teamPhotos/Muskan Kothari.jpg'
 import vv from './teamPhotos/Vaibhav Vemula.jpg'
 import kd from './teamPhotos/Kohav Dey.jpg'
@@ -14,7 +13,7 @@ import gj from './teamPhotos/Gitika Jain.jpg'
 import sak from './teamPhotos/Shreyas A Katti.jpg'
 import sb from './teamPhotos/Shreesh Bajpai.jpg'
 import akb from './teamPhotos/Akshay K B.jpg'
-
+import dr from './teamPhotos/Divyansh Raina.jpg'
 export const TeamDetails = [
     {
         name:'Muskan Kothari',
@@ -125,7 +124,7 @@ export const TeamDetails = [
         name:'Divyansh Raina',
         email:'divicoolman729@gmail.com',
         linedin:'',
-        img:m,
+        img:dr,
         role:'Mentor'
     },
     {
