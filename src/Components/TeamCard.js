@@ -4,10 +4,10 @@ const TeamCard = (props) => {
     // const dr = 'https://drive.google.com/uc?export=view&id='+props.data.img
   return (
     <>
-      <div data-aos="fade-in" data-aos-delay="50" className="w-full bg-white rounded-lg sahdow-lg overflow-hidden flex flex-col justify-center items-center">
+      <div data-aos="fade-in" data-aos-delay="50" className="md:w-72 mx-auto bg-white rounded-lg sahdow-lg overflow-hidden flex flex-col justify-center items-center">
         <div>
           <img
-            className="object-center object-fill h-72 w-96"
+            className="object-center object-fill h-72 w-72"
             src={props.data.img}
             alt="v"
             referrerpolicy="no-referrer"
