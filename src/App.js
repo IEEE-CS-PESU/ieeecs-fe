@@ -5,6 +5,9 @@ import NavBar from "./Components/NavBar";
 import Home from "./Home";
 import Events from "./Events";
 // import Spotlight from "./Spotlight";
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 
 function App() {
   return (

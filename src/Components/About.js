@@ -10,7 +10,7 @@ const About = () => {
 
       <div className="bg-slate-50 min-h-full h-auto flex flex-col md:flex-row md:w-full pt-5 md:pb-24">
         <div className="grid place-content-center basis-3/5 pt-0 md:pt-0">
-          <div className="flex flex-col items-center">
+          <div data-aos="fade-in" className="flex flex-col items-center">
             <span className="text-gray-200">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -31,7 +31,7 @@ const About = () => {
             </p>
           </div>
 
-          <div className="md:w-4/5 md:basis-2/5 basis-1/2 mx-5 md:ml-24 ">
+          <div data-aos="fade-up-right" data-aos-delay="100" className="md:w-4/5 md:basis-2/5 basis-1/2 mx-5 md:ml-24 ">
             <div className="rounded-t-xl bg-gray-300 flex h-12 items-center w-full border-b-2 border-gray-400 shadow-sm">
               <div className="pl-5 grid grid-cols-3 w-32">
                 <FontAwesomeIcon
@@ -73,7 +73,7 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="md:basis-3/5 basis-1/2 grid place-items-center text-9xl md:text-9xl text-[#f8a219]">
+        <div data-aos="fade-up-left" data-aos-delay="100" className="md:basis-3/5 basis-1/2 grid place-items-center text-9xl md:text-9xl text-[#f8a219]">
           <DogModel />
         </div>
       </div>

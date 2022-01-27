@@ -3,8 +3,8 @@ import React from "react";
 const Contact = React.forwardRef((props, ref) => {
   return (
     <>
-      <div ref={ref} className="h-auto pt-12 pb-12 bg-slate-100">
-        <div className="max-w-screen-2xl px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto bg-gray-100 text-gray-900 ">
+      <div data-aos-delay="100" ref={ref} className="h-auto pt-12 pb-12 bg-slate-100">
+        <div data-aos="fade-up" className="max-w-screen-2xl px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto bg-gray-100 text-gray-900 ">
           <div className="flex flex-col justify-between">
             <div>
               <h2 className="text-4xl lg:text-5xl font-bold leading-tight">

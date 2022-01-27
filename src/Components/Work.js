@@ -35,7 +35,7 @@ const Work = () => {
       <div className="border-gray-500 border-t-[2px] border-dashed" />
       <div ref={myRef} className="h-auto pb-28 bg-[#202023]">
         <div className="flex flex-col pt-7">
-          <div className="flex flex-col items-center">
+          <div data-aos="fade-up"  className="flex flex-col items-center">
             <span className="text-gray-500">
               <FontAwesomeIcon
                 icon={faCode}
@@ -46,7 +46,7 @@ const Work = () => {
               Our Objective
             </p>
           </div>
-          <div className="flex justify-center w-full relative top-[-30px] md:top-[-50px]">
+          <div data-aos="fade-up" className="flex justify-center w-full relative top-[-30px] md:top-[-50px]">
             <p className="text-center px-5 md:px-0 md:w-2/3 text-white md:leading-8 font-mono md:text-xl ">
               Inculcate a research oriented environment in Computer Science,
               Electronics &amp; Communication, Electrical &amp; Electronics Engineering,
@@ -57,8 +57,8 @@ const Work = () => {
           </div>
           <div>
             <div className="flex justify-center">
-              <div className="grid grid-cols-2 gap-y-8 lg:grid-cols-3 w-full lg:grid-rows-2 md:w-3/5 md:gap-y-12">
-                <div className="flex flex-col items-center">
+              <div data-aos="fade-up" data-aos-delay="100" className="grid grid-cols-2 gap-y-8 lg:grid-cols-3 w-full lg:grid-rows-2 md:w-3/5 md:gap-y-12">
+                <div data-aos="flip-right" data-aos-delay="200" className="flex flex-col items-center">
                   <div className="md:h-40 md:w-40 h-40 w-40 bg-slate-50 rounded-lg">
                     <lottie-player
                       src="https://assets3.lottiefiles.com/packages/lf20_lln7m43m.json"
@@ -75,7 +75,7 @@ const Work = () => {
                   </div>
                 </div>
 
-                <div className="flex flex-col items-center">
+                <div data-aos="flip-right" data-aos-delay="100" className="flex flex-col items-center">
                   <div className="md:h-40 md:w-40 h-40 w-40 bg-slate-50 rounded-lg">
                     <lottie-player
                       src="https://assets8.lottiefiles.com/temp/lf20_3bpCnZ.json"
@@ -91,7 +91,7 @@ const Work = () => {
                   </div>
                 </div>
 
-                <div className="flex flex-col items-center">
+                <div data-aos="flip-right" data-aos-delay="100" className="flex flex-col items-center">
                   <div className="md:h-40 md:w-40 h-40 w-40 bg-slate-50 rounded-lg">
                     <lottie-player
                       src="https://assets10.lottiefiles.com/packages/lf20_qp1q7mct.json"
@@ -108,7 +108,7 @@ const Work = () => {
                   </div>
                 </div>
 
-                <div className="flex flex-col items-center">
+                <div data-aos="flip-right" data-aos-delay="100" className="flex flex-col items-center">
                   <div className="md:h-40 md:w-40 h-40 w-40 bg-slate-50 rounded-lg">
                     <lottie-player
                       src="https://assets5.lottiefiles.com/packages/lf20_n8ys1tsg.json"
@@ -125,7 +125,7 @@ const Work = () => {
                   </div>
                 </div>
 
-                <div className="flex flex-col items-center">
+                <div data-aos="flip-right" data-aos-delay="100" className="flex flex-col items-center">
                   <div className="md:h-40 md:w-40 h-40 w-40 bg-slate-50 rounded-lg">
                     <lottie-player
                       src="https://assets8.lottiefiles.com/packages/lf20_vsg5kswn.json"
@@ -142,7 +142,7 @@ const Work = () => {
                   </div>
                 </div>
 
-                <div className="flex flex-col items-center">
+                <div data-aos="flip-right" data-aos-delay="100" className="flex flex-col items-center">
                   <div className="md:h-40 md:w-40 h-40 w-40 bg-slate-50 rounded-lg">
                     <lottie-player
                       src="https://assets10.lottiefiles.com/packages/lf20_9azkhcpb.json"
