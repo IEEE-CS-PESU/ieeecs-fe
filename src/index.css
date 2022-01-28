@@ -6,6 +6,7 @@
   box-sizing: border-box;
 }
 
+
 html,
 body,
 #root {
@@ -14,6 +15,11 @@ body,
   margin: 0;
   padding: 0;
   background: #202023;
+  /* overflow-x:scroll; */
+  width:auto;
+}
+html {
+  overflow-x: hidden;
 }
 
 .eve {
