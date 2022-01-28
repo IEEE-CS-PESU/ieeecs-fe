@@ -14,6 +14,7 @@ import sak from './teamPhotos/Shreyas A Katti.jpg'
 import sb from './teamPhotos/Shreesh Bajpai.jpg'
 import akb from './teamPhotos/Akshay K B.jpg'
 import dr from './teamPhotos/Divyansh Raina.jpg'
+import an from './teamPhotos/Anusha Naik.jpg'
 
 export const TeamDetails = [
     {
@@ -41,7 +42,7 @@ export const TeamDetails = [
         name:'Anusha Naik',
         email:'anushanaik21@gmail.com',
         linedin:'',
-        img:fe,
+        img:an,
         role:'Treasurer'
     },
     {
