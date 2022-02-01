@@ -15,6 +15,7 @@ import sb from './teamPhotos/Shreesh Bajpai.jpg'
 import akb from './teamPhotos/Akshay K B.jpg'
 import dr from './teamPhotos/Divyansh Raina.jpg'
 import an from './teamPhotos/Anusha Naik.jpg'
+import tr from './teamPhotos/Thanushree R.jpg'
 
 export const TeamDetails = [
     {
@@ -35,7 +36,7 @@ export const TeamDetails = [
         name:'Thanushree R',
         email:'tanulr15@gmail.com',
         linedin:'',
-        img:fe,
+        img:tr,
         role:'Secretary'
     },
     {
