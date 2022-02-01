@@ -1,4 +1,4 @@
-import fe from './teamPhotos/fe.jpg'
+// import fe from './teamPhotos/fe.jpg'
 import mk from './teamPhotos/Muskan Kothari.jpg'
 import vv from './teamPhotos/Vaibhav Vemula.jpg'
 import kd from './teamPhotos/Kohav Dey.jpg'
@@ -16,6 +16,7 @@ import akb from './teamPhotos/Akshay K B.jpg'
 import dr from './teamPhotos/Divyansh Raina.jpg'
 import an from './teamPhotos/Anusha Naik.jpg'
 import tr from './teamPhotos/Thanushree R.jpg'
+import m from './teamPhotos/Monika.jpg'
 
 export const TeamDetails = [
     {
@@ -113,7 +114,7 @@ export const TeamDetails = [
         name:'Monika',
         email:'moniksr801@gmail.com',
         linedin:'',
-        img:fe,
+        img:m,
         role:'Designer'
     },
     {
