@@ -23,7 +23,8 @@
     "react-tsparticles": "^1.39.0",
     "three": "^0.136.0",
     "vanta": "^0.5.21",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "wouter": "*"
   },
   "scripts": {
     "start": "react-scripts start",
