@@ -24,14 +24,14 @@ export const TeamDetails = [
         email:'muskan.kothari0120@gmail.com',
         linedin:'',
         img:mk,
-        role:'Chairperson'
+        role:'Student Chair'
     },
     {
         name:'Vaibhav Vemula',
         email:'vaibhav25vemula23@gmail.com',
         linedin:'',
         img:vv,
-        role:'Vice Chairperson'
+        role:'Student Vice Chair'
     },
     {
         name:'Thanushree R',
