@@ -59,7 +59,13 @@ const Events = () => {
                 </p>
               </div>
               <div className="flex justify-center mt-9">
-                <a href="#!" type="button" className="pr-10">
+                <a
+                  href="https://instagram.com/ieee.cs.pesu"
+                  type="button"
+                  className="pr-10"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <FontAwesomeIcon icon={faInstagram} className="text-4xl" />
                 </a>
                 <a

@@ -11,9 +11,11 @@ const Footer = () => {
           <div className="container min-w-full pt-6">
             <div className="flex justify-center mb-6">
               <a
-                href="#!"
+                href="https://instagram.com/ieee.cs.pesu"
                 type="button"
                 className="pr-10"
+                target='_blank'
+                rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={faInstagram} className="text-4xl" />
               </a>
