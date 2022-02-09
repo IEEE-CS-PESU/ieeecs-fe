@@ -4,6 +4,7 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { useCursor, Image, Text } from "@react-three/drei";
 import { useRoute, useLocation } from "wouter";
 import { NavLink } from "react-router-dom";
+import TT from "../images/mail2.png"
 
 const GOLDENRATIO = 1.61803398875;
 
@@ -113,15 +114,12 @@ function Frames({
 
 function Frame({ url, tex, c = new THREE.Color(), ...props }) {
   const [hovered, hover] = useState(false);
-  //   const [rnd] = useState(() => Math.random());
   const image = useRef();
   const frame = useRef();
   //   const name = getUuid(url);
   const name = url;
   useCursor(hovered);
-  useFrame((state) => {
-    // image.current.material.zoom =
-    //   2 + Math.sin(rnd * 10000 + state.clock.elapsedTime / 3) / 2;
+  useFrame((state) => {      
     image.current.scale.x = THREE.MathUtils.lerp(
       image.current.scale.x,
       0.85 * (hovered ? 1 : 1),
@@ -168,12 +166,9 @@ function Frame({ url, tex, c = new THREE.Color(), ...props }) {
         <Image
           raycast={() => null}
           ref={image}
-          position={[0, 0, 0.7]}
-          url="https://images.unsplash.com/photo-1599420186946-7b6fb4e297f0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3687&q=80"
+          position={[0, 0, 0.71]}
+          url={TT}
         />
-        {/* <Html position={[0, 0, 0]} transform>
-            <button style={{height:'1px'}}>hfh</button>
-        </Html> */}
       </mesh>
       <Text
         maxWidth={0.1}
