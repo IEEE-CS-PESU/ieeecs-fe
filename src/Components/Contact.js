@@ -1,10 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios"
 
 const Contact = React.forwardRef((props, ref) => {
+  const [name, setName] = useState();
+  const [email, setEmail] = useState();
+  const [message, setMessage] = useState();
+  const [status, setStatus] = useState(false);
+
+  const submitForm = (e) => {
+    e.preventDefault();
+
+    const dat = {
+      name,
+      email,
+      message,
+    };
+    console.log(dat);
+    axios.post('https://ieeecspesu.herokuapp.com/contactemail', dat)
+    setName()
+    setEmail()
+    setMessage()
+    setStatus(true)
+
+    e.target.reset();
+  };
   return (
     <>
-      <div data-aos-delay="100" ref={ref} className="h-auto pt-12 pb-12 bg-slate-100">
-        <div data-aos="fade-up" className="max-w-screen-2xl px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto bg-gray-100 text-gray-900 ">
+      <div
+        data-aos-delay="100"
+        ref={ref}
+        className="h-auto pt-12 pb-12 bg-slate-100"
+      >
+        <div
+          data-aos="fade-up"
+          className="max-w-screen-2xl px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto bg-gray-100 text-gray-900 "
+        >
           <div className="flex flex-col justify-between">
             <div>
               <h2 className="text-4xl lg:text-5xl font-bold leading-tight">
@@ -972,36 +1002,50 @@ const Contact = React.forwardRef((props, ref) => {
             </div>
           </div>
           <div className="md:pl-44">
-            <div>
-              <span className="uppercase text-sm text-gray-600 font-bold">
-                Full Name
-              </span>
-              <input
-                className="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-                type="text"
-                placeholder=""
-              />
-            </div>
-            <div className="mt-8">
-              <span className="uppercase text-sm text-gray-600 font-bold">
-                Email
-              </span>
-              <input
-                className="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-                type="text"
-              />
-            </div>
-            <div className="mt-8">
-              <span className="uppercase text-sm text-gray-600 font-bold">
-                Message
-              </span>
-              <textarea className="w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"></textarea>
-            </div>
-            <div className="mt-8">
-              <button className="uppercase text-sm font-bold tracking-wide bg-[#f8a219] hover:bg-[#ffb53f] text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">
-                Send Message
-              </button>
-            </div>
+            <form onSubmit={submitForm}>
+              <div>
+                <span className="uppercase text-sm text-gray-600 font-bold">
+                  Full Name
+                </span>
+                <input
+                  className="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                  type="text"
+                  placeholder=""
+                  onChange={(e) => setName(e.target.value)}
+                  required
+                />
+              </div>
+              <div className="mt-8">
+                <span className="uppercase text-sm text-gray-600 font-bold">
+                  Email
+                </span>
+                <input
+                  className="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                  type="email"
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+              </div>
+              <div className="mt-8">
+                <span className="uppercase text-sm text-gray-600 font-bold">
+                  Message
+                </span>
+                <textarea
+                  className="w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                  onChange={(e) => setMessage(e.target.value)}
+                  required
+                ></textarea>
+              </div>
+              <div className="mt-8">
+                <button
+                  type="submit"
+                  className="uppercase text-sm font-bold tracking-wide bg-[#f8a219] hover:bg-[#ffb53f] text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline"
+                >
+                  Send Message
+                </button>
+              </div>
+              {status && <div className="text-center pt-1 text-gray-600 text-sm">Message Sent!</div>}
+            </form>
           </div>
         </div>
       </div>

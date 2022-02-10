@@ -10,7 +10,7 @@ const TeamCard = (props) => {
             className="object-center object-fill md:h-72 md:w-72 h-40 w-40 rounded-full md:rounded-full"
             src={props.data.img}
             alt="v"
-            referrerpolicy="no-referrer"
+            referrerPolicy="no-referrer"
           ></img>
         </div>
         <div className="text-center py-3 md:py-6">
