@@ -1,3 +1,9 @@
+# IEEE CS Frontend
+
+Website - https://ieeecspesu.tech [![Netlify Status](https://api.netlify.com/api/v1/badges/62f5cf5c-ef4c-42cb-8843-5871b7785bdb/deploy-status)](https://app.netlify.com/sites/ieeecspesu/deploys)
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,4 +74,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# ieeecs-fe
