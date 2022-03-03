@@ -18,8 +18,7 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route path="/contact" element={<Home comp={'contact'}/>} />
           <Route path="/team" element={<Home comp={'team'}/>} />
-          <Route path="/events" element={<Events />} />
-          {/* <Route path="/spotlight" element={<Spotlight />} /> */}
+          <Route path="/events" element={<Events />} />      
         </Routes>
         <Footer />
       </BrowserRouter>
