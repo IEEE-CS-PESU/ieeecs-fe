@@ -198,6 +198,27 @@ export const TeamDetails = [
         role:'Mentor'
     },
     {
+        name:'Hita Juneja',
+        email:'hitajuneja@gmail.com',
+        linedin:'',
+        img:hj,
+        role:'Web Developer'
+    },
+    {
+        name:'Veeresh R G',
+        email:'veeresh.ravi@gmail.com',
+        linedin:'',
+        img:vrg,
+        role:'Web Developer'
+    },
+    {
+        name:'Anirudh Lakhotia',
+        email:'sanjeev196945@gmail.com',
+        linedin:'',
+        img:al,
+        role:'Web Developer'
+    },
+    {
         name:'Ashrita B Kumar',
         email:'ashritakum@gmail.com',
         linedin:'',
@@ -252,26 +273,5 @@ export const TeamDetails = [
         linedin:'',
         img:ms,
         role:'Designer'
-    },
-    {
-        name:'Hita Juneja',
-        email:'hitajuneja@gmail.com',
-        linedin:'',
-        img:hj,
-        role:'Web Developer'
-    },
-    {
-        name:'Veeresh R G',
-        email:'veeresh.ravi@gmail.com',
-        linedin:'',
-        img:vrg,
-        role:'Web Developer'
-    },
-    {
-        name:'Anirudh Lakhotia',
-        email:'sanjeev196945@gmail.com',
-        linedin:'',
-        img:al,
-        role:'Web Developer'
     },
 ]
