@@ -7,6 +7,7 @@ import Events from "./Events";
 // import Spotlight from "./Spotlight";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import At from "./At";
 AOS.init();
 
 function App() {
@@ -18,7 +19,8 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route path="/contact" element={<Home comp={'contact'}/>} />
           <Route path="/team" element={<Home comp={'team'}/>} />
-          <Route path="/events" element={<Events />} />      
+          <Route path="/events" element={<Events />} />
+          <Route path="/at2022" element={<At />} />     
         </Routes>
         <Footer />
       </BrowserRouter>

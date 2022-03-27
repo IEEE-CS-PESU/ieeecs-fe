@@ -12,7 +12,7 @@ function Nav() {
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
               <div className="flex-shrink-0">
-                <img className="h-16" src={logo} alt="Workflow" />
+                <NavLink to='/'><img className="h-16" src={logo} alt="Workflow" /></NavLink>
               </div>
               <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-4">

@@ -12,7 +12,7 @@ const Footer = () => {
             <div className="flex justify-center mb-6">
               <a
                 href="https://instagram.com/ieee.cs.pesu"
-                type="button"
+                
                 className="pr-10"
                 target='_blank'
                 rel="noopener noreferrer"
@@ -21,7 +21,7 @@ const Footer = () => {
               </a>
               <a
                 href="https://www.linkedin.com/company/ieee-cs-pesu/"
-                type="button"
+                
                 className="pr-10"
                 target='_blank'
                 rel="noopener noreferrer"
@@ -30,7 +30,7 @@ const Footer = () => {
               </a>
               <a
                 href="mailto:ieee.cs.rr@pes.edu"
-                type="button"
+                
                 className=""
               >
                 <FontAwesomeIcon icon={faEnvelope} className="text-4xl" />

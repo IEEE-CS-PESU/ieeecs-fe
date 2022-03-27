@@ -29,3 +29,11 @@ html {
   background-size: cover;
   background-attachment: fixed;
 }
+
+.tt{
+  background-image: url("https://i.postimg.cc/D0PcPtX6/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}

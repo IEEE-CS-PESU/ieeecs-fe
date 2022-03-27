@@ -13,8 +13,11 @@ const Home = (props) => {
     if (props.comp === "contact") {
       contactRef.current.scrollIntoView({ behavior: "smooth" });
     }
-    if (props.comp === "team") {
+    else if (props.comp === "team") {
       teamRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    else{
+      window.scrollTo({top: 0, behavior: 'smooth'});
     }
   }, [props]);
   return (
