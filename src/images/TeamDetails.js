@@ -32,7 +32,7 @@ import ss from './teamPhotos/Shivani S.jpg'
 import sbp from './teamPhotos/Sidhaarthi B Patil.jpg'
 import vrg from './teamPhotos/Veeresh R G.jpg'
 import tta from './teamPhotos/T Tarun Aditya.jpg'
-import vp from './teamPhotos/T Vijay Prashant.jpg'
+// import vp from './teamPhotos/T Vijay Prashant.jpg'
 
 export const TeamDetails = [
     {
@@ -190,13 +190,13 @@ export const TeamDetails = [
         img:ro,
         role:'Mentor'
     },
-    {
-        name:'T Vijay Prashant',
-        email:'tvijayprashant@gmail.com',
-        linedin:'',
-        img:vp,
-        role:'Mentor'
-    },
+    // {
+    //     name:'T Vijay Prashant',
+    //     email:'tvijayprashant@gmail.com',
+    //     linedin:'',
+    //     img:vp,
+    //     role:'Mentor'
+    // },
     {
         name:'Hita Juneja',
         email:'hitajuneja@gmail.com',
