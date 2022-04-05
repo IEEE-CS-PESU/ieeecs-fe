@@ -12,7 +12,9 @@ function Nav() {
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
               <div className="flex-shrink-0">
-                <NavLink to='/'><img className="h-16" src={logo} alt="Workflow" /></NavLink>
+                <NavLink to="/">
+                  <img className="h-16" src={logo} alt="Workflow" />
+                </NavLink>
               </div>
               <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-4">
@@ -28,7 +30,7 @@ function Nav() {
                   >
                     Home
                   </NavLink>
-                  <NavLink
+                  {/* <NavLink
                     style={({ isActive }) => {
                       return {
                         backgroundColor: isActive ? "rgb(55 65 81)" : "",
@@ -39,7 +41,15 @@ function Nav() {
                     className="text-black hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-lg font-medium"
                   >
                     Events
-                  </NavLink>
+                  </NavLink> */}
+                  <a
+                    href="https://codeofchaos.ieeecspesu.tech/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-black hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-lg font-medium"
+                  >
+                    Events
+                  </a>
 
                   <NavLink
                     style={({ isActive }) => {

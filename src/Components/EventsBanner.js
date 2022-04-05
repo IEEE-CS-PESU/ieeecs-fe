@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 
 const EventsBanner = () => {
   return (
@@ -9,9 +9,17 @@ const EventsBanner = () => {
           Technology is best when it brings people together.
         </p>
         <div className="w-full text-center pt-12">
-          <NavLink to="/events" className="text-xl bg-[#f8a219] hover:bg-[#ffb53f] text-white font-bold py-5 px-10 rounded">
+          {/* <NavLink to="/events" className="text-xl bg-[#f8a219] hover:bg-[#ffb53f] text-white font-bold py-5 px-10 rounded">
             Explore Events
-          </NavLink>
+          </NavLink> */}
+          <a
+            href="https://codeofchaos.ieeecspesu.tech/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xl bg-[#f8a219] hover:bg-[#ffb53f] text-white font-bold py-5 px-10 rounded"
+          >
+            Explore Events
+          </a>
         </div>
       </div>
     </>
