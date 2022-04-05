@@ -164,7 +164,7 @@ function Nav() {
                 >
                   Home
                 </NavLink>
-                <NavLink
+                {/* <NavLink
                   onClick={() => setIsOpen(!isOpen)}
                   style={({ isActive }) => {
                     return {
@@ -176,7 +176,15 @@ function Nav() {
                   className="text-black hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
                   Events
-                </NavLink>
+                </NavLink> */}
+                <a
+                  href="https://codeofchaos.ieeecspesu.tech/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-black hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                >
+                  Events
+                </a>
                 <NavLink
                   onClick={() => setIsOpen(!isOpen)}
                   style={({ isActive }) => {
