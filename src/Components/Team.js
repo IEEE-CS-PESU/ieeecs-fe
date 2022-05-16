@@ -1,33 +1,16 @@
-import React/*, { useEffect, useState }*/ from "react";
-// import axios from "axios";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import TeamCard from "./TeamCard";
-import { TeamDetails, /*TeamDetails2*/ } from "../images/TeamDetails";
 import EventsBanner from "./EventsBanner";
 
 const Team = React.forwardRef((props, ref) => {
-  // const [TeamData, setTeam] = useState([]);
+  const [TeamData, setTeam] = useState([]);
 
-  // useEffect(() => {
-  //   axios.get("https://ieeecspesu.herokuapp.com/team").then((res) => {
-  //     setTeam(res.data);
-  //   });
-  // }, []);
-  // useEffect(() => {
-  //   const shuffleArray = (array) => {
-  //     return array.sort(() => Math.random() - 0.5);
-  //   };
-
-  //   var coc = TeamDetails2[0];
-  //   TeamDetails2.shift();
-  //   var TeamDe = shuffleArray(TeamDetails2);
-  //   for (var i = 0; i < TeamDe.length; i++) {
-  //     var t = shuffleArray(TeamDe[i]);
-  //     for (var j = 0; j < t.length; j++) {
-  //       coc.push(t[j]);
-  //     }
-  //   }
-  //   setTeam(coc);
-  // }, []);
+  useEffect(() => {
+    axios.get(`${process.env.REACT_APP_BASE_URL}/coreteam`).then((res) => {
+      setTeam(res.data.api_data);
+    });
+  }, []);
 
   return (
     <>
@@ -43,15 +26,8 @@ const Team = React.forwardRef((props, ref) => {
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* {TeamData
-              ? TeamData.map((iii, i) => {
-                  return <TeamCard data={iii} key={i} />;
-                })
-              : TeamDetails.map((iii, i) => {
-                  return <TeamCard data={iii} key={i} />;
-                })} */}
-            {TeamDetails &&
-              TeamDetails.map((iii, i) => {
+            {TeamData &&
+              TeamData.map((iii, i) => {
                 return <TeamCard data={iii} key={i} />;
               })}
           </div>

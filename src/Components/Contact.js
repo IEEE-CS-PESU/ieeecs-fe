@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios"
+import axios from "axios";
 
 const Contact = React.forwardRef((props, ref) => {
   const [name, setName] = useState();
@@ -9,19 +9,17 @@ const Contact = React.forwardRef((props, ref) => {
 
   const submitForm = (e) => {
     e.preventDefault();
-
     const dat = {
       name,
       email,
       message,
     };
     console.log(dat);
-    axios.post('https://ieeecspesu.herokuapp.com/contactemail', dat)
-    setName()
-    setEmail()
-    setMessage()
-    setStatus(true)
-
+    axios.post(`${process.env.REACT_APP_BASE_URL}/contactemail`, dat);
+    setName();
+    setEmail();
+    setMessage();
+    setStatus(true);
     e.target.reset();
   };
   return (
@@ -1044,7 +1042,11 @@ const Contact = React.forwardRef((props, ref) => {
                   Send Message
                 </button>
               </div>
-              {status && <div className="text-center pt-1 text-gray-600 text-sm">Message Sent!</div>}
+              {status && (
+                <div className="text-center pt-1 text-gray-600 text-sm">
+                  Message Sent!
+                </div>
+              )}
             </form>
           </div>
         </div>

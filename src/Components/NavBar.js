@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
-import logo from "../images/ieeelogo.png";
+import logo from "../assets/ieeelogo.png";
 import { NavLink } from "react-router-dom";
 
 function Nav() {

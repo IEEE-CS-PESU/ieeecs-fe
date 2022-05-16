@@ -4,7 +4,7 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { useCursor, Image, Text } from "@react-three/drei";
 import { useRoute, useLocation } from "wouter";
 import { NavLink } from "react-router-dom";
-import TT from "../images/mail2.png"
+import TT from "../images/mail2.png";
 
 const GOLDENRATIO = 1.61803398875;
 
@@ -12,9 +12,9 @@ const dat = {
   Inauguration: ["Register Now!", "urrrrrr", true],
   PreviousEvents: ["Explore", "/", false],
   UpcomingEvents: ["Explore", "/", false],
-  Community: ["Join", "https://forms.gle/7vo3ktrDBhfKaGZS7", true],
+  Community: ["Join", "/", true],
   Spotlight: ["Check Out!", "/", false],
-  Recruitment: ["Join Us!", "https://forms.gle/GbDbCKpQqp4cbGG58", true],
+  Recruitment: ["Join Us!", "/", true],
   Projects: ["Explore", "/", false],
   false: ["Explore", "/", false],
 };
@@ -119,7 +119,7 @@ function Frame({ url, tex, c = new THREE.Color(), ...props }) {
   //   const name = getUuid(url);
   const name = url;
   useCursor(hovered);
-  useFrame((state) => {      
+  useFrame((state) => {
     image.current.scale.x = THREE.MathUtils.lerp(
       image.current.scale.x,
       0.85 * (hovered ? 1 : 1),

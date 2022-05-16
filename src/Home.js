@@ -12,12 +12,10 @@ const Home = (props) => {
   useEffect(() => {
     if (props.comp === "contact") {
       contactRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-    else if (props.comp === "team") {
+    } else if (props.comp === "team") {
       teamRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-    else{
-      window.scrollTo({top: 0, behavior: 'smooth'});
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   }, [props]);
   return (

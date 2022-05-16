@@ -12,27 +12,21 @@ const Footer = () => {
             <div className="flex justify-center mb-6">
               <a
                 href="https://instagram.com/ieee.cs.pesu"
-                
                 className="pr-10"
-                target='_blank'
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={faInstagram} className="text-4xl" />
               </a>
               <a
                 href="https://www.linkedin.com/company/ieee-cs-pesu/"
-                
                 className="pr-10"
-                target='_blank'
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={faLinkedinIn} className="text-4xl" />
               </a>
-              <a
-                href="mailto:ieee.cs.rr@pes.edu"
-                
-                className=""
-              >
+              <a href="mailto:ieee.cs.rr@pes.edu" className="">
                 <FontAwesomeIcon icon={faEnvelope} className="text-4xl" />
               </a>
             </div>
@@ -42,9 +36,7 @@ const Footer = () => {
             style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
           >
             © 2022 Copyright &nbsp;
-            <span className="text-[#f8a219]">
-              IEEE CS PESU
-            </span>
+            <span className="text-[#f8a219]">IEEE CS PESU</span>
           </div>
         </footer>
       </div>
