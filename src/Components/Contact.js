@@ -6,7 +6,7 @@ const Contact = React.forwardRef((props, ref) => {
   const [email, setEmail] = useState();
   const [message, setMessage] = useState();
   const [status, setStatus] = useState(false);
-
+  const url = 'https://ieeecspesu.herokuapp.com'
   const submitForm = (e) => {
     e.preventDefault();
     const dat = {
@@ -14,8 +14,8 @@ const Contact = React.forwardRef((props, ref) => {
       email,
       message,
     };
-    console.log(dat);
-    axios.post(`${process.env.REACT_APP_BASE_URL}/contactemail`, dat);
+    
+    axios.post(`${url}/contactemail`, dat);
     setName();
     setEmail();
     setMessage();

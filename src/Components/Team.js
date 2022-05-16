@@ -5,9 +5,9 @@ import EventsBanner from "./EventsBanner";
 
 const Team = React.forwardRef((props, ref) => {
   const [TeamData, setTeam] = useState([]);
-
+  const url = 'https://ieeecspesu.herokuapp.com'
   useEffect(() => {
-    axios.get(`${process.env.REACT_APP_BASE_URL}/coreteam`).then((res) => {
+    axios.get(`${url}/coreteam`).then((res) => {
       setTeam(res.data.api_data);
     });
   }, []);
