@@ -84,11 +84,28 @@ function Nav() {
                         color: isActive ? "white" : "",
                       };
                     }}
+                    to="/spotlight"
+                    className="text-black hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-lg font-medium"
+                  >
+                    Spotlight
+                  </NavLink>
+
+                  <NavLink
+                    style={({ isActive }) => {
+                      return {
+                        backgroundColor: isActive ? "rgb(55 65 81)" : "",
+                        color: isActive ? "white" : "",
+                      };
+                    }}
                     to="/contact"
                     className="text-black hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-lg font-medium"
                   >
                     Contact Us
                   </NavLink>
+
+
+
+                  
                 </div>
               </div>
             </div>
@@ -197,6 +214,21 @@ function Nav() {
                   className="text-black hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
                   Team
+                </NavLink>
+
+
+                <NavLink
+                  onClick={() => setIsOpen(!isOpen)}
+                  style={({ isActive }) => {
+                    return {
+                      backgroundColor: isActive ? "rgb(55 65 81)" : "",
+                      color: isActive ? "white" : "",
+                    };
+                  }}
+                  to="/spotlight"
+                  className="text-black hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                >
+                  Spotlight
                 </NavLink>
 
                 {/* <NavLink
