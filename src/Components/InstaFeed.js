@@ -40,10 +40,10 @@ export default function Feed({ token, ...props }) {
       // cancel pending fetch request on component unmount
       abortController.abort();
     };
-  }, [props.limit,token ]);
+  }, [props.limit, token]);
 
   return (
-    <div id="container" className="grid lg:grid-cols-3 md:grid-cols-2">
+    <div id="container" className="bg-slate-200 grid lg:grid-cols-3 md:grid-cols-2">
       {feeds.map((feed, i) =>
         i < 3 ? (
           // <div className="border border-red-400 my-20 pr-12 mr-8 py-5" key={i}>

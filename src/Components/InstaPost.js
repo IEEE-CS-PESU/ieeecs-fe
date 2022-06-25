@@ -5,7 +5,7 @@ const Posts = (props) => {
   const { id, caption, media_type, media_url, timestamp, username, permalink } =
     props.feed;
   let post;
-  console.log(id, media_type);
+  // console.log(id, media_type);
 
   switch (media_type) {
     case "VIDEO":
