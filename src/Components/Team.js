@@ -8,8 +8,9 @@ const Team = React.forwardRef((props, ref) => {
   const url = 'https://ieeecspesu.herokuapp.com'
   useEffect(() => {
     axios.get(`${url}/coreteam`).then((res) => {
-      setTeam(res.data.api_data);
-      console.log(res.data.api_data);
+      // console.log(res.data)
+      setTeam(res.data);
+      // console.log(res.data);
     });
   }, []);
 
