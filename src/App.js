@@ -7,6 +7,7 @@ import Events from "./Events";
 import InstaFeed from "./Components/InstaFeed";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Timeline from "./Components/Timeline";
 AOS.init();
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route path="/contact" element={<Home comp={"contact"} />} />
           <Route path="/team" element={<Home comp={"team"} />} />
-          <Route path="/events" element={<Events />} />
+          <Route path="/events" element={<Timeline />} />
           <Route path="/spotlight" element={<InstaFeed token={process.env.REACT_APP_ACCESS_TOKEN} limit={30}/>}/>
         </Routes>
         <Footer />

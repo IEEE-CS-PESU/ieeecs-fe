@@ -24,6 +24,7 @@
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "react-tsparticles": "^2.1.0",
+    "react-vertical-timeline-component": "^3.5.2",
     "three": "^0.141.0",
     "vanta": "^0.5.22",
     "web-vitals": "^2.1.4",
