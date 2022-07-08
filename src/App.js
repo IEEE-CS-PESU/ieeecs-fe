@@ -21,10 +21,17 @@ function App() {
           <Route path="/contact" element={<Home comp={"contact"} />} />
           <Route path="/team" element={<Home comp={"team"} />} />
           <Route path="/events" element={<Timeline />} />
-          <Route path="/spotlight" element={<InstaFeed token={process.env.REACT_APP_ACCESS_TOKEN} limit={30}/>}/>
+          <Route
+            path="/spotlight"
+            element={
+              <InstaFeed
+                token={process.env.REACT_APP_ACCESS_TOKEN}
+                limit={30}
+              />
+            }
+          />
           <Route path="/events" element={<Events />} />
           <Route path="/test" element={<Test />} />
-          <Route path="/spotlight" element={<InstaFeed token={process.env.REACT_APP_ACCESS_TOKEN} limit={30} />} />
         </Routes>
         <Footer />
       </BrowserRouter>
