@@ -7,6 +7,7 @@ import Events from "./Events";
 import InstaFeed from "./Components/InstaFeed";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Test from "./Components/Outerevents";
 AOS.init();
 
 function App() {
@@ -19,7 +20,8 @@ function App() {
           <Route path="/contact" element={<Home comp={"contact"} />} />
           <Route path="/team" element={<Home comp={"team"} />} />
           <Route path="/events" element={<Events />} />
-          <Route path="/spotlight" element={<InstaFeed token={process.env.REACT_APP_ACCESS_TOKEN} limit={30}/>}/>
+          <Route path="/test" element={<Test />} />
+          <Route path="/spotlight" element={<InstaFeed token={process.env.REACT_APP_ACCESS_TOKEN} limit={30} />} />
         </Routes>
         <Footer />
       </BrowserRouter>
