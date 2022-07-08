@@ -2,10 +2,11 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import TeamCard from "./TeamCard";
 import EventsBanner from "./EventsBanner";
+import Loading from "./Loading";
 
 const Team = React.forwardRef((props, ref) => {
   const [TeamData, setTeam] = useState([]);
-  const url = 'https://ieeecspesu.herokuapp.com'
+  const url = "https://ieeecspesu.herokuapp.com";
   useEffect(() => {
     axios.get(`${url}/coreteam`).then((res) => {
       // console.log(res.data)
@@ -13,6 +14,8 @@ const Team = React.forwardRef((props, ref) => {
       // console.log(res.data);
     });
   }, []);
+
+  const loading = [<div></div>, <Loading />, <div></div>];
 
   return (
     <>
@@ -26,12 +29,18 @@ const Team = React.forwardRef((props, ref) => {
               Our Team
             </p>
           </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {TeamData &&
-              TeamData.map((iii, i) => {
-                return <TeamCard data={iii} key={i} />;
-              })}
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto">
+            {TeamData && TeamData.length === 0
+              ? loading.map((iii, i) => {
+                  return (
+                    <div className="mx-auto">
+                      {i % 2 === 0 ? <div></div> : <Loading />}
+                    </div>
+                  );
+                })
+              : TeamData.map((iii, i) => {
+                  return <TeamCard data={iii} key={i} />;
+                })}
           </div>
         </section>
       </div>
