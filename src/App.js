@@ -8,7 +8,10 @@ import InstaFeed from "./Components/InstaFeed";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Timeline from "./Components/Timeline";
-import Test from "./Components/Outerevents";
+import Test from "./Components/Test";
+import EventFrames from './Components/EventFrames'
+import Coc from "./Components/COC";
+import Template from "./Components/Template";
 AOS.init();
 
 function App() {
@@ -20,7 +23,13 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route path="/contact" element={<Home comp={"contact"} />} />
           <Route path="/team" element={<Home comp={"team"} />} />
-          <Route path="/events" element={<Timeline />} />
+          <Route path="/events" element={<EventFrames />} />
+          {/*
+            What I was thinking
+          */}
+
+          <Route path="/eve/:id" element={<Test />} />
+          {/* <Route path="/events/prev" element={<Template />} />
           <Route
             path="/spotlight"
             element={
@@ -30,8 +39,8 @@ function App() {
               />
             }
           />
-          <Route path="/events" element={<Events />} />
-          <Route path="/test" element={<Test />} />
+          {/* <Route path="/events" element={<Events />} /> */}
+          {/* <Route path="/test" element={<Test />} /> */}
         </Routes>
         <Footer />
       </BrowserRouter>

@@ -4,24 +4,30 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { useCursor, Image, Text } from "@react-three/drei";
 import { useRoute, useLocation } from "wouter";
 import { NavLink } from "react-router-dom";
-import TT from "../images/mail2.png";
-
+import TT from "../assets/pic.jpg";
+import Template from "../Components/Template";
+import donkey from '../assets/donkey.jpeg'
+import { Link } from "react-router-dom";
 const GOLDENRATIO = 1.61803398875;
 
-const dat = {
-  Inauguration: ["Register Now!", "urrrrrr", true],
-  PreviousEvents: ["Explore", "/", false],
-  UpcomingEvents: ["Explore", "/", false],
-  Community: ["Join", "/", true],
-  Spotlight: ["Check Out!", "/", false],
-  Recruitment: ["Join Us!", "/", true],
-  Projects: ["Explore", "/", false],
-  false: ["Explore", "/", false],
+
+const dat =
+{
+  Inauguration: ["Register Now!", "/eve/Inaug", true],
+  PreviousEvents: ["Explore", "/eve/PrevEvents", false, "some text", [donkey, donkey, donkey]], // prev - event - 3
+  UpcomingEvents: ["Explore", "/eve/UpcomEvents", false],
+  Community: ["Join", "/eve/Community", true],
+  Spotlight: ["Check Out!", "/eve/spotlight", true],
+  Recruitment: ["Join Us!", "/eve/Recruits", true],
+  Projects: ["Explore", "/eve/Projects", false],
+  false: ["Explore", "/eve/`", false],
 };
 
 export default function Model({ images }) {
   const [vis, setVis] = useState(false);
   const [nnn, setnnn] = useState("false");
+
+  console.log(nnn)
   return (
     <>
       <Canvas gl={{ alpha: false }} dpr={[1, 1.5]} camera={{ fov: 70 }}>
@@ -34,20 +40,22 @@ export default function Model({ images }) {
       {vis && (
         <div className="relative z-10 top-[-200px] w-full pt-10 text-center">
           {dat[nnn][2] ? (
-            <a
-              href={dat[nnn][1]}
-              target="_blank"
-              rel="noreferrer"
-              type="button"
+            <Link
+              to={dat[nnn][1]}
+              // target="_blank"
+              // rel="noreferrer"
+              // type="button"
               className="px-5 py-2 bg-slate-100 rounded-3xl text-xl shadow-inner hover:bg-[#f8a219]"
             >
-              {dat[nnn][0]}
-            </a>
+              {dat[nnn][0]} !!!!!!!
+            </Link>
           ) : (
             <NavLink
               to={dat[nnn][1]}
               className="px-5 py-2 bg-slate-100 rounded-3xl text-xl shadow-inner hover:bg-[#f8a219]"
             >
+              {/* <Template Title={nnn} detail={dat[nnn][3]} imgList={dat[nnn][4]} /> */}
+
               {dat[nnn][0]}
             </NavLink>
           )}

@@ -35,7 +35,7 @@ const Events = () => {
   //     };
   //   }, [vantaEffect]);
   return (
-    <div className="w-screen border-4 border-purple-700 pt-24 ">
+    <div className="w-full h-full">
       <Outerevents />
 
 
