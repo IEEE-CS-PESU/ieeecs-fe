@@ -1,4 +1,4 @@
-import image from '../assets/pic.jpg'
+// import image from '../assets/pic.jpg'
 
 const Image = (props) => {
     return (
