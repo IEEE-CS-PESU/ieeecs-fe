@@ -5,7 +5,7 @@ import { useCursor, Image, Text } from "@react-three/drei";
 import { useRoute, useLocation } from "wouter";
 import { NavLink } from "react-router-dom";
 import TT from "../assets/pic.jpg";
-import Template from "../Components/Template";
+// import Template from "../Components/Template";
 import donkey from '../assets/donkey.jpeg'
 import { Link } from "react-router-dom";
 const GOLDENRATIO = 1.61803398875;
@@ -13,7 +13,7 @@ const GOLDENRATIO = 1.61803398875;
 
 const dat =
 {
-  Inauguration: ["Register Now!", "/eve/Inaug", true],
+  Inauguration: ["Inauguration", "/eve/Inaug", true],
   PreviousEvents: ["Explore", "/eve/PrevEvents", false, "some text", [donkey, donkey, donkey]], // prev - event - 3
   UpcomingEvents: ["Explore", "/eve/UpcomEvents", false],
   Community: ["Join", "/eve/Community", true],
@@ -30,7 +30,7 @@ export default function Model({ images }) {
   console.log(nnn)
   return (
     <>
-      <Canvas gl={{ alpha: false }} dpr={[1, 1.5]} camera={{ fov: 70 }}>
+      <Canvas gl={{ alpha: false }} dpr={[0.4, 1]} camera={{ fov: 70 }}>
         <color attach="background" args={["#202023"]} />
         {/* <fog attach="fog" args={["#202023", 0, 15]} /> */}
         <group position={[0, -0.5, 1.2]}>

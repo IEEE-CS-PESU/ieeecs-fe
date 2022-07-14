@@ -62,11 +62,13 @@ const images = [
 const Events = () => {
   useEffect(() => {
     // window.location ='/events' 
+    console.log("hello ")
     window.scrollTo(0, 0);
   }, []);
   return (
     <>
       <div className="bg-black text-4xl w-full h-full pt-20">
+        {/* fallback --> Components of looading */}
         <Suspense fallback={<h1 className="text-white">loading</h1>}>
           <Model images={images} />
         </Suspense>

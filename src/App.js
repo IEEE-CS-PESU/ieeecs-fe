@@ -3,15 +3,16 @@ import Footer from "./Components/Footer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import NavBar from "./Components/NavBar";
 import Home from "./Home";
-import Events from "./Events";
-import InstaFeed from "./Components/InstaFeed";
+// import Events from "./Events";
+// import InstaFeed from "./Components/InstaFeed";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Timeline from "./Components/Timeline";
+// import Timeline from "./Components/Timeline";
 import Test from "./Components/Test";
 import EventFrames from './Components/EventFrames'
-import Coc from "./Components/COC";
-import Template from "./Components/Template";
+// import Coc from "./Components/COC";
+// import Template from "./Components/Template";
+import Error from "./Components/Error";
 AOS.init();
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
           */}
 
           <Route path="/eve/:id" element={<Test />} />
+          <Route path="*" element={<Error />} />
           {/* <Route path="/events/prev" element={<Template />} />
           <Route
             path="/spotlight"

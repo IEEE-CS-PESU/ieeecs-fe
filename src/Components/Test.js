@@ -1,5 +1,4 @@
-import { useEffect } from "react";
-import { useState } from "react";
+
 import {
     useParams,
     useNavigate
@@ -14,17 +13,13 @@ const Test = () => {
     let { id } = useParams();
     const navigate = useNavigate();
 
-    const [currPage, setPage] = useState("");
-    useEffect(() => {
-        setPage(id);
-    }, [id])
 
 
 
 
     const data = {
 
-        Inaug: ["Register Now!", "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, tempore officia! Dicta rerum quidem enim, voluptatum quos vitae consectetur totam tempora commodi? Laboriosam distinctio eveniet, quis ea at eaque accusamus ab porro ullam fugiat. Fugiat, optio perspiciatis delectus debitis illo id in cupiditate ducimus! Minima ab dolor facilis aperiam labore.", [pic, pic, pic, pic, pic, pic, pic, pic, pic, pic]],
+        Inaug: ["Inauguration", "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, tempore officia! Dicta rerum quidem enim, voluptatum quos vitae consectetur totam tempora commodi? Laboriosam distinctio eveniet, quis ea at eaque accusamus ab porro ullam fugiat. Fugiat, optio perspiciatis delectus debitis illo id in cupiditate ducimus! Minima ab dolor facilis aperiam labore.", [pic, pic, pic, pic, pic, pic, pic, pic, pic, pic]],
         PrevEvents: ["Previous Events", "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, tempore officia! Dicta rerum quidem enim, voluptatum quos vitae consectetur totam tempora commodi? Laboriosam distinctio eveniet, quis ea at eaque accusamus ab porro ullam fugiat. Fugiat, optio perspiciatis delectus debitis illo id in cupiditate ducimus! Minima ab dolor facilis aperiam labore.", [pic, pic, pic, pic, pic, pic, pic, pic, pic, pic]],
         UpcomEvents: ["Upcoming Events", "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, tempore officia! Dicta rerum quidem enim, voluptatum quos vitae consectetur totam tempora commodi? Laboriosam distinctio eveniet, quis ea at eaque accusamus ab porro ullam fugiat. Fugiat, optio perspiciatis delectus debitis illo id in cupiditate ducimus! Minima ab dolor facilis aperiam labore.", [pic, pic, pic, pic, pic, pic, pic, pic, pic, pic]],
         Community: ["Community", "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, tempore officia! Dicta rerum quidem enim, voluptatum quos vitae consectetur totam tempora commodi? Laboriosam distinctio eveniet, quis ea at eaque accusamus ab porro ullam fugiat. Fugiat, optio perspiciatis delectus debitis illo id in cupiditate ducimus! Minima ab dolor facilis aperiam labore.", [pic, pic, pic, pic, pic, pic, pic, pic, pic, pic]],

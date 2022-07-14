@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
 import logo from "../assets/ieeelogo.png";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 function Nav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,14 +42,12 @@ function Nav() {
                   >
                     Events
                   </NavLink> */}
-                  <a
-                    href="https://codeofchaos.ieeecspesu.tech/"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <NavLink
+                    to={"/events"}
                     className="text-black hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-lg font-medium"
                   >
                     Events
-                  </a>
+                  </NavLink>
 
                   <NavLink
                     style={({ isActive }) => {
@@ -105,7 +103,7 @@ function Nav() {
 
 
 
-                  
+
                 </div>
               </div>
             </div>
