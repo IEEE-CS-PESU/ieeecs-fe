@@ -1,5 +1,6 @@
 import React, { Suspense, useEffect } from "react";
 import Model from "../models/Model";
+import HeroLoad from "./HeroLoad";
 
 
 const images = [
@@ -69,7 +70,7 @@ const Events = () => {
     <>
       <div className="bg-black text-4xl w-full h-full pt-20">
         {/* fallback --> Components of looading */}
-        <Suspense fallback={<h1 className="text-white">loading</h1>}>
+        <Suspense fallback={<HeroLoad />}>
           <Model images={images} />
         </Suspense>
       </div>

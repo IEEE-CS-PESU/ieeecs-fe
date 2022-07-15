@@ -42,7 +42,8 @@ function App() {
             }
           />
           {/* <Route path="/events" element={<Events />} /> */}
-          {/* <Route path="/test" element={<Test />} /> */}
+          {/* ----------Test Route for Testing Components Here */}
+          {/* <Route path="/test" element={<HeroLoad />} /> */}
         </Routes>
         <Footer />
       </BrowserRouter>
