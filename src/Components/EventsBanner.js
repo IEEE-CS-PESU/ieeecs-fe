@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 // import { NavLink } from "react-router-dom";
 
 const EventsBanner = () => {
@@ -12,14 +13,15 @@ const EventsBanner = () => {
           {/* <NavLink to="/events" className="text-xl bg-[#f8a219] hover:bg-[#ffb53f] text-white font-bold py-5 px-10 rounded">
             Explore Events
           </NavLink> */}
-          <a
+          {/* <a
             href="https://codeofchaos.ieeecspesu.tech/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-xl bg-[#f8a219] hover:bg-[#ffb53f] text-white font-bold py-5 px-10 rounded"
           >
             Explore Events
-          </a>
+          </a> */}
+          <Link className="text-xl bg-[#f8a219] hover:bg-[#ffb53f] text-white font-bold py-5 px-10 rounded" to="/events">Explore Events</Link>
         </div>
       </div>
     </>

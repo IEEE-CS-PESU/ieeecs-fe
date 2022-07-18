@@ -52,7 +52,7 @@ const Team = React.forwardRef((props, ref) => {
   }, []);
 
   //For Loading Symbol
-  const loading = [<div></div>, <Loading />, <div></div>];
+  // const loading = [<div></div>, <Loading />, <div></div>];
 
   const styles =
   {
@@ -70,21 +70,21 @@ const Team = React.forwardRef((props, ref) => {
     }
   }
 
-
+  // top-[-115px] md:top-[-150px]
   return (
     <>
       <div ref={ref} className="h-auto bg-slate-100">
-        <section className="max-w-6xl text-center mx-auto px-4 sm:px-6 lg:px-4 pb-12 md:pb-24 pt-0">
+        <section className="max-w-6xl text-center mx-auto px-4 sm:px-6 lg:px-4 pb-12 md:pb-24">
           <div data-aos="fade-up" className="flex flex-col items-center">
             <span className="text-gray-200">
-              <div className="md:text-[150px] text-[125px]">100001</div>
+              <div className="md:text-[150px] text-[105px] px-3">011100</div>
             </span>
-            <p className="text-[#000000] font-sans md:text-7xl text-5xl relative top-[-115px] md:top-[-150px]">
+            <p className="text-[#000000] font-sans md:text-7xl text-5xl absolute top-16 md:top-20 ">
               Our Team
             </p>
           </div>
 
-          <div className="my-10 flex justify-center">
+          <div className="mb-10 flex justify-center">
             <button style={present ? styles.active : styles.inActive} className="p-2 text-[1.2rem] rounded-tl-full rounded-bl-full border-2 border-yellow-400" onClick={(prev) => {
               setPresent(true)
 
@@ -106,13 +106,13 @@ const Team = React.forwardRef((props, ref) => {
                 (present === true ? currData : xData).map((item, ind) => { return <TeamCard data={item} key={ind + 1} /> }
                 ) :
 
-                loading.map((iii, i) => {
-                  return (
-                    <div className="mx-auto">
-                      {i % 2 === 0 ? <div></div> : <Loading />}
-                    </div>
-                  );
-                })
+
+
+                <div className="text-center ml-32">
+                  <Loading />
+                </div>
+
+
             }
 
           </div>
