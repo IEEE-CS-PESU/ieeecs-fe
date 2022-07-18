@@ -16,7 +16,6 @@ const Team = React.forwardRef((props, ref) => {
   const [present, setPresent] = useState(true);
   const [currData, setCurrData] = useState([]);
   const [xData, setXData] = useState([]);
-  const [finalData, setFinalData] = useState([])
 
 
   //Axios Get request
@@ -25,6 +24,7 @@ const Team = React.forwardRef((props, ref) => {
     axios.get(`${url}/coreteam`)
       .then((res) => {
 
+        //Ex-Members Array
         const Xnames = ["Monika", "Pramod Seshasayanan P",
           "Konkala Manisha", "K S Ramalakshmi"];
 
@@ -42,8 +42,6 @@ const Team = React.forwardRef((props, ref) => {
         setTeam(res.data);
         setCurrData(res.data.filter(currentMembers));
         setXData(res.data.filter(checkXMembers))
-        setFinalData(currData);
-        // console.log(res.data);
       })
       .catch(err => {
         console.log("Error")
@@ -52,16 +50,6 @@ const Team = React.forwardRef((props, ref) => {
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  //Array Contaning Exmembers
-
-
-
-
-
-  // const currentMem = TeamData.filter(currentMembers);
-  // console.log(currentMem);
-  // const filter_Data = TeamData.filter(checkXMembers);
 
   //For Loading Symbol
   const loading = [<div></div>, <Loading />, <div></div>];
@@ -81,7 +69,7 @@ const Team = React.forwardRef((props, ref) => {
 
     }
   }
-  console.log(finalData)
+
 
   return (
     <>
@@ -99,13 +87,13 @@ const Team = React.forwardRef((props, ref) => {
           <div className="my-10 flex justify-center">
             <button style={present ? styles.active : styles.inActive} className="p-2 text-[1.2rem] rounded-tl-full rounded-bl-full border-2 border-yellow-400" onClick={(prev) => {
               setPresent(true)
-              setFinalData(currData)
+
             }}>Current Members
             </button>
 
             <button style={!present ? styles.active : styles.inActive} className="p-2 text-[1.2rem] rounded-tr-full rounded-br-full border-2 border-yellow-400 " onClick={(prev) => {
               setPresent(false)
-              setFinalData(xData);
+
             }}>Ex Members
             </button>
 
@@ -125,9 +113,6 @@ const Team = React.forwardRef((props, ref) => {
                     </div>
                   );
                 })
-
-
-
             }
 
           </div>
