@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import NavBar from "./Components/NavBar";
 import Home from "./Home";
 // import Events from "./Events";
-// import InstaFeed from "./Components/InstaFeed";
+import InstaFeed from "./Components/InstaFeed";
 import AOS from "aos";
 import "aos/dist/aos.css";
 // import Timeline from "./Components/Timeline";
@@ -31,7 +31,7 @@ function App() {
 
           <Route path="/eve/:id" element={<Test />} />
           <Route path="*" element={<Error />} />
-          {/* <Route path="/events/prev" element={<Template />} />
+
           <Route
             path="/spotlight"
             element={
@@ -41,6 +41,8 @@ function App() {
               />
             }
           />
+          {/* <Route path="/events/prev" element={<Template />} />
+         
           {/* <Route path="/events" element={<Events />} /> */}
           {/* ----------Test Route for Testing Components Here */}
           {/* <Route path="/test" element={<HeroLoad />} /> */}

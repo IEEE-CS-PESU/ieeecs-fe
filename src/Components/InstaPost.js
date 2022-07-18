@@ -47,6 +47,21 @@ const Posts = (props) => {
   };
   let date = new Date(timestamp).toLocaleString("en-us", options);
   //   console.log(date)
+  const truncate = (string) => {
+
+    let n = string.length;
+    let farthest_ = -1;
+    let count = 0;
+    for (let i = 0; i < n; i++) {
+      if (string[i] === " " && count < 30) {
+        farthest_ = i;
+        count++;
+      }
+    }
+    let ans = string.slice(0, farthest_ + 1);
+    return ans.concat("...");
+  }
+
   return (
     <React.Fragment>
       <div className="border rounded-xl overflow-hidden  w-full lg:w-full md:w-full bg-white mx-3 md:mx-0 lg:mx-8">
@@ -72,7 +87,7 @@ const Posts = (props) => {
           <div className="pt-1">
             <div className="mb-2 text-sm">
               <span className="font-medium mr-2">{username}</span>
-              {caption}
+              {caption.length > 200 && caption !== " " ? truncate(caption) : caption}
             </div>
           </div>
           <div className="text-sm mb-2 text-gray-400 cursor-pointer font-medium">
