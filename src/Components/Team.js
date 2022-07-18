@@ -25,7 +25,8 @@ const Team = React.forwardRef((props, ref) => {
     axios.get(`${url}/coreteam`)
       .then((res) => {
 
-        const Xnames = ["Monika", "Pramod Seshasayanan P"];
+        const Xnames = ["Monika", "Pramod Seshasayanan P",
+          "Konkala Manisha", "K S Ramalakshmi"];
 
         const currentMembers = (obj) => {
 
