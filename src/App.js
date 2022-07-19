@@ -1,6 +1,6 @@
 import React from "react";
-import * as fireBase from "firebase/app"
-import { firebaseConfig } from "./firebase_config"
+// import * as fireBase from "firebase/app"
+// import { firebaseConfig } from "./firebase_config"
 import Footer from "./Components/Footer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import NavBar from "./Components/NavBar";
@@ -19,7 +19,7 @@ AOS.init();
 
 
 //Firebase Analytics
-fireBase.initializeApp(firebaseConfig)
+// fireBase.initializeApp(firebaseConfig)
 function App() {
   return (
     <>
