@@ -34,25 +34,40 @@ const Team = React.forwardRef((props, ref) => {
         }
 
 
+
         const checkXMembers = (obj) => {
 
           return Xnames.includes(obj.name);
         }
 
-        setTeam(res.data);
+        //Sorting Function according to id field
+        const sortedObj = (res.data).sort((a, b) => {
+          return Number(a.id) - Number(b.id);
+        })
+
+        setTeam(sortedObj);
+
         setCurrData(res.data.filter(currentMembers));
         setXData(res.data.filter(checkXMembers))
       })
       .catch(err => {
         console.log("Error")
       })
-      ;
+
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   //For Loading Symbol
-  // const loading = [<div></div>, <Loading />, <div></div>];
+  const loading = [<div></div>, <Loading />, <div></div>];
+
+  //Testing
+  /* 
+  Team.forEach((item) => {
+    console.log((item.id))
+  })
+  */
+
 
   const styles =
   {
@@ -106,14 +121,16 @@ const Team = React.forwardRef((props, ref) => {
                 (present === true ? currData : xData).map((item, ind) => { return <TeamCard data={item} key={ind + 1} /> }
                 ) :
 
+                loading.map((item, ind) => {
+                  return (
+                    ind % 2 === 0 ? <div /> : <div className="text-center mx-auto"><Loading /></div>
+                  )
+                }
 
 
-                <div className="text-center ml-32">
-                  <Loading />
-                </div>
+                )}
 
 
-            }
 
           </div>
 
