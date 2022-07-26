@@ -62,19 +62,19 @@ const Projects = () => {
                     </p>
                   </div>
                   <div className="flex justify-center mt-9">
-                    <a href="https://instagram.com/ieee.cs.pesu" type="button" className="pr-10 hover:text-[#f8a219]">
+                    <a href="https://instagram.com/ieee.cs.pesu" className="pr-10 hover:text-[#f8a219]">
                       <FontAwesomeIcon icon={faInstagram} className="text-4xl" />
                     </a>
                     <a
                       href="https://www.linkedin.com/company/ieee-cs-pesu/"
-                      type="button"
+                    
                       className="pr-10 hover:text-[#f8a219]"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       <FontAwesomeIcon icon={faLinkedinIn} className="text-4xl" />
                     </a>
-                    <a href="mailto:ieee.cs.rr@pes.edu" type="button" className="hover:text-[#f8a219]">
+                    <a href="mailto:ieee.cs.rr@pes.edu" className="hover:text-[#f8a219]">
                       <FontAwesomeIcon icon={faEnvelope} className="text-4xl" />
                     </a>
                   </div>
