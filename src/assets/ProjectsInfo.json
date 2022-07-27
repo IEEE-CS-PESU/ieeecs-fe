@@ -1,0 +1,40 @@
+[
+
+
+    {
+        "domain": "Software Dev",
+        "title":"A Virtual Memory App For Patients with Dementia",
+        "team":"Amulya Shetty and Ritika S Kalyanshetty",
+        "description":"This app intends to help Dementia affected individuals by tracking the fluctuations in their mood, and can also store details about them to aid them in recollection. Caregivers of such patients can use the app to maintain a photo album of the patient's life, and one can add descriptions to help patients recollect their memories.This app also features a text-to-speech function to make it more user friendly. Built for smartphone users, this app was built using Android Studio.",
+        "link":"https://github.com/IEEE-CS-PESU/IEEE-CS-Dimentia-Virtual-Memory-App"
+    },
+    {
+        "domain": "AI/ML",
+        "title":"Sign Language and Gesture Recognition",
+        "team":"Jayaharini Srinivasan, Gandikota Sai Krithika and Diya Anne Tharappan",
+        "description":"This app aims to normalise the usage of sign language, by helping the differently abled communicate easily with their peers. It simply intends to translate sign and gestures to English words for easy communication. A create a sign detector captures hand gestures in a live feed and converts it into text by training a CNN model using machine learning algorithms. This also helps in eventually building a gesture input enabled text editor. This algorithm was built using OpenCV and Tensorflow.",
+        "link":"https://github.com/IEEE-CS-PESU/IEEE-CS-Sign-language-and-gesture-recognition"
+    },
+    {
+        "domain": "Computer Vision",
+        "title":"Real Time Object Detection",
+        "team":"Aryan Kapoor, Avijit Panda and Bharath DH",
+        "description":"This project intends to create an augmented method to detect and measure objects and compute their measurements in real-time. The input can be from any IoT device such as a webcam. This project made use of OpenCV libraries to implement real-time object measurement, and is a very low cost implementation.",
+        "link":"https://github.com/IEEE-CS-PESU/IEEE-CS-Real-Time-Object-Measurement"
+    },
+    {
+        "domain": "IoT",
+        "title":"Smart Visor",
+        "team":"Rohan Mahesh Rao, Roshan Srihari and Shreyas Pai K",
+        "description":"This hardware based project helps drivers on highways at night-times and prevents accidents, which can be caused by beams from vehicles that momentarily blind drivers.The solution is to use electrochromic glass on the helmet visors connected to control systems that tint the glass based on the intensity of light detected by sensors.This project was built using a Raspberry Pi.",
+        "link":"https://github.com/IEEE-CS-PESU/IEEE-CS-Smart-Visor"
+    },
+    {
+        "domain": "AI/ML",
+        "title":"Positive Synonym Generator",
+        "team":"Nidhi S Sheth, Prateeksha Bhat and Shashank Ganachari",
+        "description":"With the increased use in social media, hate speech is now quite prominent, and users fling around words without understanding the effect it would have. This algorithm performs sentence-level sentiment analysis and classifies statements based on their tones: whether positive or negative. If negative, it identifies the negative word and suggests an alternate positive/ less negative word to use. It was built using Python, Keras and Tensorflow.",
+        "link":"https://github.com/IEEE-CS-PESU/IEEE-CS-Positive-Synonym-Generator"
+    }
+    
+]

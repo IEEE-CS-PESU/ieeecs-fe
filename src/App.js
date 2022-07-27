@@ -15,6 +15,8 @@ import EventFrames from './Components/EventFrames'
 // import Coc from "./Components/COC";
 // import Template from "./Components/Template";
 import Error from "./Components/Error";
+import Projects from "./Components/Projects";
+
 AOS.init();
 
 
@@ -30,6 +32,8 @@ function App() {
           <Route path="/contact" element={<Home comp={"contact"} />} />
           <Route path="/team" element={<Home comp={"team"} />} />
           <Route path="/events" element={<EventFrames />} />
+          <Route path="/projects" element={<Projects />} />
+
           {/*
             What I was thinking
           */}
