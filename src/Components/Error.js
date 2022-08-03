@@ -7,7 +7,7 @@ const Error = () => {
 
     useEffect(() => {
 
-        let path = ["/events/Spotlight", "/events/Community", "/events/PreviousEvents", "/events/Inauguration", "/events/UpcomingEvents",
+        let path = ["/events/Spotlight", "/events/Community", "/events/PreviousEvents", "/events/CurrentEvent", "/events/UpcomingEvents",
             "/events/Recruitment", "/events/Projects"]
         if (path.includes(window.location.pathname)) {
             navi('/events');

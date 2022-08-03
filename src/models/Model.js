@@ -4,22 +4,20 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { useCursor, Image, Text } from "@react-three/drei";
 import { useRoute, useLocation } from "wouter";
 import { NavLink } from "react-router-dom";
-import TT from "../assets/pic.jpg";
-// import Template from "../Components/Template";
-import donkey from '../assets/donkey.jpeg'
-import { Link } from "react-router-dom";
+
+// import { Link } from "react-router-dom";
 const GOLDENRATIO = 1.61803398875;
 
 
 const dat =
 {
-  Inauguration: ["Inauguration", "/eve/Inaug", true],
-  PreviousEvents: ["Explore", "/eve/PrevEvents", false, "some text", [donkey, donkey, donkey]], // prev - event - 3
-  UpcomingEvents: ["Explore", "/eve/UpcomEvents", false],
+  CurrentEvent: ["Register Now", "/eve/Inaug", true],
+  PreviousEvents: ["Explore", "/eve/PrevEvents", true], // prev - event - 3
+  UpcomingEvents: ["Explore", "/eve/UpcomEvents", true],
   Community: ["Join", "/eve/Community", true],
-  Spotlight: ["Check Out!", "/eve/spotlight", true],
-  Recruitment: ["Join Us!", "/eve/Recruits", true],
-  Projects: ["Explore", "/eve/Projects", false],
+  Spotlight: ["Explore", "/spotlight", true],
+  Recruitment: ["Join Us!", "/eve/Recruits", false],
+  Projects: ["Explore", "/eve/Projects", true],
   false: ["Explore", "/eve/`", false],
 };
 
@@ -30,7 +28,7 @@ export default function Model({ images }) {
   console.log(nnn)
   return (
     <>
-      <Canvas gl={{ alpha: false }} dpr={[0.4, 1]} camera={{ fov: 70 }}>
+      <Canvas gl={{ alpha: false }} dpr={[1, 1]} camera={{ fov: 65 }}>
         <color attach="background" args={["#202023"]} />
         {/* <fog attach="fog" args={["#202023", 0, 15]} /> */}
         <group position={[0, -0.5, 1.2]}>
@@ -39,26 +37,17 @@ export default function Model({ images }) {
       </Canvas>
       {vis && (
         <div className="relative z-10 top-[-200px] w-full pt-10 text-center">
-          {dat[nnn][2] ? (
-            <Link
+          {dat[nnn][2] && (
+            <NavLink
               to={dat[nnn][1]}
               // target="_blank"
               // rel="noreferrer"
               // type="button"
               className="px-5 py-2 bg-slate-100 rounded-3xl text-xl shadow-inner hover:bg-[#f8a219]"
             >
-              {dat[nnn][0]} !!!!!!!
-            </Link>
-          ) : (
-            <NavLink
-              to={dat[nnn][1]}
-              className="px-5 py-2 bg-slate-100 rounded-3xl text-xl shadow-inner hover:bg-[#f8a219]"
-            >
-              {/* <Template Title={nnn} detail={dat[nnn][3]} imgList={dat[nnn][4]} /> */}
-
               {dat[nnn][0]}
             </NavLink>
-          )}
+          ) }
         </div>
       )}
     </>
@@ -120,7 +109,7 @@ function Frames({
   );
 }
 
-function Frame({ url, tex, c = new THREE.Color(), ...props }) {
+function Frame({img, url, tex, c = new THREE.Color(), ...props }) {
   const [hovered, hover] = useState(false);
   const image = useRef();
   const frame = useRef();
@@ -175,7 +164,8 @@ function Frame({ url, tex, c = new THREE.Color(), ...props }) {
           raycast={() => null}
           ref={image}
           position={[0, 0, 0.71]}
-          url={TT}
+          scale={[0.6, 0.99, 0.9]}
+          url={img}
         />
       </mesh>
       <Text

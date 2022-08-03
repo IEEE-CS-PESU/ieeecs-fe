@@ -43,7 +43,13 @@ function Nav() {
                     Events
                   </NavLink> */}
                   <NavLink
-                    to={"/events"}
+                    style={({ isActive }) => {
+                      return {
+                        backgroundColor: isActive ? "rgb(55 65 81)" : "",
+                        color: isActive ? "white" : "",
+                      };
+                    }}
+                    to="/events"
                     className="text-black hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-lg font-medium"
                   >
                     Events
