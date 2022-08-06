@@ -6,7 +6,7 @@
 // import { NavLink } from "react-router-dom";
 // import Main from "./Components/Main";
 
-import Outerevents from "./Components/Outerevents";
+import Outerevents from "../Components/Outerevents";
 const Events = () => {
   //   const [vantaEffect, setVantaEffect] = useState(0);
   //   const myRef = useRef(null);

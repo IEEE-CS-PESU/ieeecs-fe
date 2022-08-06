@@ -5,7 +5,7 @@ import {
 } from "react-router-dom";
 
 import pic from '../assets/pic.jpg'
-import Template from "./Template";
+import Template from "../Components/Template";
 // import styles from 'test/module.css'
 const Test = () => {
 

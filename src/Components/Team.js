@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import TeamCard from "./TeamCard";
-import EventsBanner from "./EventsBanner";
-import Loading from "./Loading";
+import TeamCard from "../utils/TeamCard";
+import EventsBanner from "../utils/EventsBanner";
+import Loading from "../utils/Loading";
 
 const Team = React.forwardRef((props, ref) => {
 

@@ -4,7 +4,7 @@ import NET from "vanta/dist/vanta.waves.min";
 // import { faInstagram, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 // import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "react-router-dom";
-import ProjectCard from "./ProjectCard";
+import ProjectCard from "../utils/ProjectCard";
 import content from "../assets/ProjectsInfo.json";
 const Projects = () => {
   const [vantaEffect, setVantaEffect] = useState(0);
@@ -37,8 +37,8 @@ const Projects = () => {
   let li = [0, 1, 2, 3, 4];
   return (
     <>
-      <div ref={myRef} className="bg-black h-auto pt-24 text-white text-4xl">
-        <div className="bg-home px-8 w-full">
+      <div ref={myRef} className="bg-black h-auto pt-24 text-white text-4xl max-h-screen overflow-scroll">
+        <div className="bg-home px-8 w-full max-h-screen overflow-scroll">
           <div
             className="
                         py-12

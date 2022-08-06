@@ -1,6 +1,6 @@
 import React, { Suspense, useEffect } from "react";
 import Model from "../models/Model";
-import HeroLoad from "./HeroLoad";
+import HeroLoad from "../utils/HeroLoad";
 import im1 from "../assets/eventPosters/1.jpg";
 import im2 from "../assets/eventPosters/2.jpg";
 import im3 from "../assets/eventPosters/3.jpg";

@@ -1,9 +1,9 @@
 import axios from "axios";
 import React, { useEffect, useState, useRef } from "react";
-import InstaPost from "./InstaPost";
-import Loading from "./Loading";
+import InstaPost from "../Components/InstaPost"
+import Loading from "../utils/Loading";
 
-export default function Feed({ token, ...props }) {
+export default function Spotlight({ token, ...props }) {
   // const REACT_VERSION = React.version;
   // console.log(REACT_VERSION)
   const [feeds, setFeedsData] = useState([]);
@@ -46,8 +46,8 @@ export default function Feed({ token, ...props }) {
   let li=[1,2,3];
 
   return (
-    <div>
-    <div id="container" className="bg-slate-200 justify-items-center justify-center grid lg:grid-cols-3 md:grid-cols-2">      
+    <div className="spotlight">
+    <div id="container" className="bg-slate-200 pt-24 justify-items-center grid lg:grid-cols-4 md:grid-cols-3">      
       {
       feeds.length ===0 ? 
         
@@ -61,17 +61,14 @@ export default function Feed({ token, ...props }) {
       :
       
       feeds.map((feed, i) =>
-        i < 3 ? (
-          // <div className="border border-red-400 my-20 pr-12 mr-8 py-5" key={i}>
-          <div className="my-20 pr-12 mr-8 py-16 w-9/12" key={i}>
-            <InstaPost key={feed.id} feed={feed} />
-          </div>
-        ) : (
+        i >=0 && feed.media_type!=='VIDEO' && 
+          // (feed.media_type==='VIDEO')? <div></div> :
           // <div className="border border-emerald-400 my-2 pr-12 mr-8 py-5" key={i}>
-          <div className="my-2 pr-12 mr-8 py-5 w-9/12" key={i}>
+          
+          <div className="py-5 md:mx-6 mx-8" key={i}>
             <InstaPost key={feed.id} feed={feed} />
           </div>
-        )
+        
       )}
       </div>
     </div>

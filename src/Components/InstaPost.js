@@ -64,7 +64,7 @@ const Posts = (props) => {
 
   return (
     <React.Fragment>
-      <div className="border rounded-xl overflow-hidden  w-full lg:w-full md:w-full bg-white mx-3 md:mx-0 lg:mx-8">
+      <div className="border rounded-xl overflow-hidden  w-full lg:w-full md:w-full bg-white mx-3 md:mx-0">
         <div className="w-full flex justify-between p-3">
           <div className="flex">
             <div className="rounded-full h-8 w-8 bg-white flex items-center justify-center overflow-hidden">
