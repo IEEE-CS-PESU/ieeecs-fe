@@ -3,6 +3,7 @@ import React, { useEffect, useState, useRef } from "react";
 import InstaPost from "../Components/InstaPost"
 import Loading from "../utils/Loading";
 
+
 export default function Spotlight({ token, ...props }) {
   // const REACT_VERSION = React.version;
   // console.log(REACT_VERSION)
