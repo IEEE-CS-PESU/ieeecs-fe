@@ -26,7 +26,7 @@ const Team = React.forwardRef((props, ref) => {
 
         //Ex-Members Array
         const Xnames = ["Monika", "Pramod Seshasayanan P",
-          "Konkala Manisha", "K S Ramalakshmi"];
+          "Konkala Manisha", "K S Ramalakshmi", "Anusha Naik", "Srividya Prasad"];
 
         const currentMembers = (obj) => {
 
