@@ -34,7 +34,7 @@ const Projects = () => {
     };
   }, [vantaEffect]);
 
-  let li = [0, 1, 2, 3, 4];
+  let li = [0, 1, 2, 3, 4,5];
   return (
     <>
       <div ref={myRef} className="bg-black h-auto pt-24 text-white text-4xl max-h-screen overflow-scroll">

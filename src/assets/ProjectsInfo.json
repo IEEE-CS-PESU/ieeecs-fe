@@ -1,12 +1,11 @@
 [
 
-
     {
-        "domain": "Software Dev",
-        "title":"A Virtual Memory App For Patients with Dementia",
-        "team":"Amulya Shetty and Ritika S Kalyanshetty",
-        "description":"This app intends to help Dementia affected individuals by tracking the fluctuations in their mood, and can also store details about them to aid them in recollection. Caregivers of such patients can use the app to maintain a photo album of the patient's life, and one can add descriptions to help patients recollect their memories.This app also features a text-to-speech function to make it more user friendly. Built for smartphone users, this app was built using Android Studio.",
-        "link":"https://github.com/IEEE-CS-PESU/IEEE-CS-Dimentia-Virtual-Memory-App"
+        "domain": "AI/ML",
+        "title":"Diagnosis of Glaucoma Using Retinal Fundus images",
+        "team":"Thejaswi A, Nisha Murthy, Rishabh Oruganti, Shreyas Katti",
+        "description":"Glaucoma is usually picked up during a routine eye test, often before it causes any noticeable symptoms. An affordable alternative to these methods involve AI and ML techniques which require images of the retinal fundus. This is what we worked on.",
+        "link":"#"
     },
     {
         "domain": "AI/ML",
@@ -30,11 +29,20 @@
         "link":"https://github.com/IEEE-CS-PESU/IEEE-CS-Smart-Visor"
     },
     {
+        "domain": "Blockchain",
+        "title":"Zemoo: A Blockchain Based E-Commerce Platform",
+        "team":"Vaibhav Vemula, Thanushree R, Kohav dey",
+        "description":"Blockchain is well-known for its security features, which add additional levels of security to the e-commerce industry. It eliminates middlemen and encourages peer-to-peer transactions. We therefore developed a decentralized e-commerce platform based on the blockchain (Zemoo). Numerous new features are included, such as rapid transactions, fewer chargeback scams, the verification of user feedback, tailored product recommendations and NFT based warranty system.",
+        "link":"#"
+    },
+    {
         "domain": "AI/ML",
         "title":"Positive Synonym Generator",
         "team":"Nidhi S Sheth, Prateeksha Bhat and Shashank Ganachari",
         "description":"With the increased use in social media, hate speech is now quite prominent, and users fling around words without understanding the effect it would have. This algorithm performs sentence-level sentiment analysis and classifies statements based on their tones: whether positive or negative. If negative, it identifies the negative word and suggests an alternate positive/ less negative word to use. It was built using Python, Keras and Tensorflow.",
         "link":"https://github.com/IEEE-CS-PESU/IEEE-CS-Positive-Synonym-Generator"
     }
+    
+
     
 ]
