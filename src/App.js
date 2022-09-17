@@ -11,15 +11,15 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 // import Timeline from "./Components/Timeline";
 import Test from "./utils/Test";
-import EventFrames from './Components/EventFrames'
+import EventFrames from "./Components/EventFrames";
 // import Coc from "./Components/COC";
 // import Template from "./Components/Template";
 import Error from "./Components/Error";
 import Projects from "./Components/Projects";
 import Spotlight from "./pages/Spotlight";
+import Timeline from "./Components/Timeline";
 
 AOS.init();
-
 
 //Firebase Analytics
 // fireBase.initializeApp(firebaseConfig)
@@ -34,6 +34,7 @@ function App() {
           <Route path="/team" element={<Home comp={"team"} />} />
           <Route path="/events" element={<EventFrames />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/timeline" element={<Timeline />} />
 
           {/*
             What I was thinking

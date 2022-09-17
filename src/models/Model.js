@@ -8,11 +8,9 @@ import { NavLink } from "react-router-dom";
 // import { Link } from "react-router-dom";
 const GOLDENRATIO = 1.61803398875;
 
-
-const dat =
-{
+const dat = {
   CurrentEvent: ["Register Now", "/eve/Inaug", true],
-  PreviousEvents: ["Explore", "/eve/PrevEvents", true], // prev - event - 3
+  PreviousEvents: ["Explore", "/timeline", true], // prev - event - 3
   UpcomingEvents: ["Explore", "/eve/UpcomEvents", true],
   Community: ["Join", "/eve/Community", true],
   Spotlight: ["Explore", "/spotlight", true],
@@ -25,7 +23,7 @@ export default function Model({ images }) {
   const [vis, setVis] = useState(false);
   const [nnn, setnnn] = useState("false");
 
-  console.log(nnn)
+  console.log(nnn);
   return (
     <>
       <Canvas gl={{ alpha: false }} dpr={[1, 1]} camera={{ fov: 65 }}>
@@ -47,7 +45,7 @@ export default function Model({ images }) {
             >
               {dat[nnn][0]}
             </NavLink>
-          ) }
+          )}
         </div>
       )}
     </>
@@ -109,7 +107,7 @@ function Frames({
   );
 }
 
-function Frame({img, url, tex, c = new THREE.Color(), ...props }) {
+function Frame({ img, url, tex, c = new THREE.Color(), ...props }) {
   const [hovered, hover] = useState(false);
   const image = useRef();
   const frame = useRef();
