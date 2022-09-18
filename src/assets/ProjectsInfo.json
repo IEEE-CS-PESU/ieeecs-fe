@@ -1,0 +1,48 @@
+[
+
+    {
+        "domain": "AI/ML",
+        "title":"Diagnosis of Glaucoma Using Retinal Fundus images",
+        "team":"Thejaswi A, Nisha Murthy, Rishabh Oruganti, Shreyas Katti",
+        "description":"Glaucoma is usually picked up during a routine eye test, often before it causes any noticeable symptoms. An affordable alternative to these methods involve AI and ML techniques which require images of the retinal fundus. This is what we worked on.",
+        "link":"#"
+    },
+    {
+        "domain": "AI/ML",
+        "title":"Sign Language and Gesture Recognition",
+        "team":"Jayaharini Srinivasan, Gandikota Sai Krithika and Diya Anne Tharappan",
+        "description":"This app aims to normalise the usage of sign language, by helping the differently abled communicate easily with their peers. It simply intends to translate sign and gestures to English words for easy communication. A create a sign detector captures hand gestures in a live feed and converts it into text by training a CNN model using machine learning algorithms. This also helps in eventually building a gesture input enabled text editor. This algorithm was built using OpenCV and Tensorflow.",
+        "link":"https://github.com/IEEE-CS-PESU/IEEE-CS-Sign-language-and-gesture-recognition"
+    },
+    {
+        "domain": "Computer Vision",
+        "title":"Real Time Object Detection",
+        "team":"Aryan Kapoor, Avijit Panda and Bharath DH",
+        "description":"This project intends to create an augmented method to detect and measure objects and compute their measurements in real-time. The input can be from any IoT device such as a webcam. This project made use of OpenCV libraries to implement real-time object measurement, and is a very low cost implementation.",
+        "link":"https://github.com/IEEE-CS-PESU/IEEE-CS-Real-Time-Object-Measurement"
+    },
+    {
+        "domain": "IoT",
+        "title":"Smart Visor",
+        "team":"Rohan Mahesh Rao, Roshan Srihari and Shreyas Pai K",
+        "description":"This hardware based project helps drivers on highways at night-times and prevents accidents, which can be caused by beams from vehicles that momentarily blind drivers.The solution is to use electrochromic glass on the helmet visors connected to control systems that tint the glass based on the intensity of light detected by sensors.This project was built using a Raspberry Pi.",
+        "link":"https://github.com/IEEE-CS-PESU/IEEE-CS-Smart-Visor"
+    },
+    {
+        "domain": "Blockchain",
+        "title":"Zemoo: A Blockchain Based E-Commerce Platform",
+        "team":"Vaibhav Vemula, Thanushree R, Kohav dey",
+        "description":"Blockchain is well-known for its security features, which add additional levels of security to the e-commerce industry. It eliminates middlemen and encourages peer-to-peer transactions. We therefore developed a decentralized e-commerce platform based on the blockchain (Zemoo). Numerous new features are included, such as rapid transactions, fewer chargeback scams, the verification of user feedback, tailored product recommendations and NFT based warranty system.",
+        "link":"#"
+    },
+    {
+        "domain": "AI/ML",
+        "title":"Positive Synonym Generator",
+        "team":"Nidhi S Sheth, Prateeksha Bhat and Shashank Ganachari",
+        "description":"With the increased use in social media, hate speech is now quite prominent, and users fling around words without understanding the effect it would have. This algorithm performs sentence-level sentiment analysis and classifies statements based on their tones: whether positive or negative. If negative, it identifies the negative word and suggests an alternate positive/ less negative word to use. It was built using Python, Keras and Tensorflow.",
+        "link":"https://github.com/IEEE-CS-PESU/IEEE-CS-Positive-Synonym-Generator"
+    }
+    
+
+    
+]

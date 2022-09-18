@@ -1,40 +1,45 @@
-import React, { useState, useEffect, useRef } from "react";
-import NET from "vanta/dist/vanta.waves.min";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faInstagram, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { NavLink } from "react-router-dom";
+// import React, { useState, useEffect, useRef } from "react";
+// import NET from "vanta/dist/vanta.waves.min";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faInstagram, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+// import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+// import { NavLink } from "react-router-dom";
+// import Main from "./Components/Main";
 
+import Outerevents from "../Components/Outerevents";
 const Events = () => {
-  const [vantaEffect, setVantaEffect] = useState(0);
-  const myRef = useRef(null);
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    if (!vantaEffect) {
-      setVantaEffect(
-        NET({
-          el: myRef.current,
-          mouseControls: true,
-          touchControls: true,
-          gyroControls: true,
-          minHeight: 200.0,
-          minWidth: 200.0,
-          scale: 1.0,
-          scaleMobile: 1.0,
-          color: 0x050505,
-          shininess: 60.0,
-          waveHeight: 17.5,
-          zoom: 0.65,
-        })
-      );
-    }
-    return () => {
-      if (vantaEffect) vantaEffect.destroy();
-    };
-  }, [vantaEffect]);
+  //   const [vantaEffect, setVantaEffect] = useState(0);
+  //   const myRef = useRef(null);
+  //   useEffect(() => {
+  //     window.scrollTo(0, 0);
+  //     if (!vantaEffect) {
+  //       setVantaEffect(
+  //         NET({
+  //           el: myRef.current,
+  //           mouseControls: true,
+  //           touchControls: true,
+  //           gyroControls: true,
+  //           minHeight: 200.0,
+  //           minWidth: 200.0,
+  //           scale: 1.0,
+  //           scaleMobile: 1.0,
+  //           color: 0x050505,
+  //           shininess: 60.0,
+  //           waveHeight: 17.5,
+  //           zoom: 0.65,
+  //         })
+  //       );
+  //     }
+  //     return () => {
+  //       if (vantaEffect) vantaEffect.destroy();
+  //     };
+  //   }, [vantaEffect]);
   return (
-    <>
-      <div ref={myRef} className="bg-black h-auto pt-24 text-white text-4xl">
+    <div className="w-full h-full">
+      <Outerevents />
+
+
+      {/* <div ref={myRef} className="bg-black h-auto pt-24 text-white text-4xl">
         <div className="bg-home px-8 w-full">
           <div
             className="
@@ -90,8 +95,9 @@ const Events = () => {
             </div>
           </div>
         </div>
-      </div>
-    </>
+      </div> */}
+    </div>
+
   );
 };
 

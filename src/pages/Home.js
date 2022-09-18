@@ -1,9 +1,9 @@
 import React, { useRef, useEffect } from "react";
-import Hero from "./Components/Hero";
-import About from "./Components/About";
-import Work from "./Components/Work";
-import Team from "./Components/Team";
-import Contact from "./Components/Contact";
+import Hero from "../utils/Hero";
+import About from "../Components/About";
+import Work from "../Components/Work";
+import Team from "../Components/Team";
+import Contact from "../Components/Contact";
 
 const Home = (props) => {
   const contactRef = useRef();

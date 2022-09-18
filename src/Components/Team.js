@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import TeamCard from "./TeamCard";
-import EventsBanner from "./EventsBanner";
-import Loading from "./Loading";
+import TeamCard from "../utils/TeamCard";
+import EventsBanner from "../utils/EventsBanner";
+import Loading from "../utils/Loading";
 
 const Team = React.forwardRef((props, ref) => {
 
@@ -26,7 +26,8 @@ const Team = React.forwardRef((props, ref) => {
 
         //Ex-Members Array
         const Xnames = ["Monika", "Pramod Seshasayanan P",
-          "Konkala Manisha", "K S Ramalakshmi", "Anusha Naik", "Srividya Prasad"];
+          "Konkala Manisha", "K S Ramalakshmi", "Srividya Prasad",
+          "Anusha Naik"];
 
         const currentMembers = (obj) => {
 
@@ -100,13 +101,13 @@ const Team = React.forwardRef((props, ref) => {
           </div>
 
           <div className="mb-10 flex justify-center">
-            <button style={present ? styles.active : styles.inActive} className="p-2 text-[1.2rem] rounded-tl-xl rounded-bl-xl border-2 border-yellow-400" onClick={(prev) => {
+            <button style={present ? styles.active : styles.inActive} className="p-2 text-[1.2rem] rounded-tl-full rounded-bl-full border-2 border-yellow-400" onClick={(prev) => {
               setPresent(true)
 
             }}>Current Members
             </button>
 
-            <button style={!present ? styles.active : styles.inActive} className="p-2 text-[1.2rem] rounded-tr-xl rounded-br-xl border-2 border-yellow-400 " onClick={(prev) => {
+            <button style={!present ? styles.active : styles.inActive} className="p-2 text-[1.2rem] rounded-tr-full rounded-br-full border-2 border-yellow-400 " onClick={(prev) => {
               setPresent(false)
 
             }}>Ex Members
