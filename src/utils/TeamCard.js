@@ -22,9 +22,9 @@ const TeamCard = (props) => {
           <p className="text-xl md:text-2xl text-gray-700 font-bold mb-1">
             {props.data.name}
           </p>
-          <p className="text-base md:text-lg text-gray-500 font-normal">
+          {props.pres && <p className="text-base md:text-lg text-gray-500 font-normal">
             {props.data.role}
-          </p>
+          </p>}
 
           <p className=" mx-12 md:mx-28 flex items-center  justify-around mt-1  rounded-2xl">
             {/* <p className="sm:tracking-[0px]  text-sm tracking-[1.3px]  md:text-lg lg:text-xl uppercase py-1 text-blue-700 font-bold">Profile</p> */}

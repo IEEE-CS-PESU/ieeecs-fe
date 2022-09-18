@@ -34,7 +34,7 @@ function App() {
           <Route path="/team" element={<Home comp={"team"} />} />
           <Route path="/events" element={<EventFrames />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/timeline" element={<Timeline />} />
+          <Route path="/eventtimeline" element={<Timeline />} />
 
           {/*
             What I was thinking

@@ -65,7 +65,6 @@ const Projects = () => {
                   and we chose the top 5 teams to work with us for 6 weeks.
                   These teams were able to bring their ideas to tangible
                   realities, guided by their mentors and professors.
-                  <br /> In short, our event was a massive success!
                 </p>
                 <br />
                 {li.map((iii, i) => (

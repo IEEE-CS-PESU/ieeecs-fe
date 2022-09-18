@@ -59,16 +59,11 @@ const About = () => {
                     className="text-black text-3xl"
                   />
                 </span>{" "}
-                &nbsp; <span className="text-center"> The IEEE Computer Society is the premier source for
-                information, inspiration, and collaboration in computer science
-                and engineering along with inter disciplinary branches like
-                Electrical, Mechanical, Electronics, Biotechnology etc.
-                Connecting members worldwide, the Computer Society empowers the
-                people who advance technology by delivering tools for
-                individuals at all stages of their professional careers. Our
-                trusted resources include international conferences,
-                peer-reviewed publications, a robust digital library, globally
-                recognized standards, and continuous learning opportunities.</span>
+                &nbsp; <span className="justify-left"> The IEEE Computer Society brings together like-minded individuals across the world from various branches
+of engineering through seminars and publications to discuss and contribute to the expansive domains of Computer Science.
+IEEE CS encourages aspiring students and professionals by delivering tools to aid them at every stage and ensure continuous learning.
+The standard for education and engagement set by IEEE CS is like none other. IEEE CS  inspires advancements in the theory, design, practice, and application of computer and information-processing science and technology
+</span>
               </p>
             </div>
           </div>

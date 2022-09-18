@@ -50,12 +50,9 @@ const Work = () => {
             className="flex justify-center w-full relative top-[-30px] md:top-[-50px]"
           >
             <p className="text-center px-5 md:px-0 md:w-2/3 text-white md:leading-8 font-mono md:text-xl ">
-              Inculcate a research oriented environment in Computer Science,
-              Electronics &amp; Communication, Electrical &amp; Electronics
-              Engineering, Mechanical Engineering, Bio Technology etc. and also
-              to take up the projects which are inter disciplinary wherein
-              students are mentored on various domains through projects and
-              workshops.
+            Inspire students and professionals to engage in acquiring knowledge about the various domains of Computer Science and contribute to the development of new technologies. 
+Encourage and motivate individuals to take up interdisciplinary projects and actively engage in learning.
+
             </p>
           </div>
           <div>

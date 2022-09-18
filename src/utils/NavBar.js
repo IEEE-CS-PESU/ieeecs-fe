@@ -30,18 +30,6 @@ function Nav() {
                   >
                     Home
                   </NavLink>
-                  {/* <NavLink
-                    style={({ isActive }) => {
-                      return {
-                        backgroundColor: isActive ? "rgb(55 65 81)" : "",
-                        color: isActive ? "white" : "",
-                      };
-                    }}
-                    to="/events"
-                    className="text-black hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-lg font-medium"
-                  >
-                    Events
-                  </NavLink> */}
                   <NavLink
                     style={({ isActive }) => {
                       return {
@@ -52,7 +40,7 @@ function Nav() {
                     to="/events"
                     className="text-black hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-lg font-medium"
                   >
-                    Events
+                    Portfolio
                   </NavLink>
 
                   <NavLink
@@ -68,18 +56,6 @@ function Nav() {
                     Team
                   </NavLink>
 
-                  {/* <NavLink
-                    style={({ isActive }) => {
-                      return {
-                        backgroundColor: isActive ? "rgb(55 65 81)" : "",
-                        color: isActive ? "white" : "",
-                      };
-                    }}
-                    to="/spotlight"
-                    className="text-black hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-lg font-medium"
-                  >
-                    Spotlight
-                  </NavLink> */}
 
                   <NavLink
                     style={({ isActive }) => {
@@ -106,10 +82,6 @@ function Nav() {
                   >
                     Contact Us
                   </NavLink>
-
-
-
-
                 </div>
               </div>
             </div>
@@ -220,6 +192,19 @@ function Nav() {
                   Team
                 </NavLink>
 
+                <NavLink
+                  onClick={() => setIsOpen(!isOpen)}
+                  style={({ isActive }) => {
+                    return {
+                      backgroundColor: isActive ? "rgb(55 65 81)" : "",
+                      color: isActive ? "white" : "",
+                    };
+                  }}
+                  to="/projects"
+                  className="text-black hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                >
+                  Projects
+                </NavLink>
 
                 <NavLink
                   onClick={() => setIsOpen(!isOpen)}
@@ -234,21 +219,6 @@ function Nav() {
                 >
                   Spotlight
                 </NavLink>
-
-                {/* <NavLink
-                  onClick={() => setIsOpen(!isOpen)}
-                  style={({ isActive }) => {
-                    return {
-                      backgroundColor: isActive ? "rgb(55 65 81)" : "",
-                      color: isActive ? "white" : "",
-                    };
-                  }}
-                  to="/spotlight"
-                  className="text-black hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                >
-                  Spotlight
-                </NavLink> */}
-
                 <NavLink
                   onClick={() => setIsOpen(!isOpen)}
                   style={({ isActive }) => {
@@ -262,6 +232,30 @@ function Nav() {
                 >
                   Contact Us
                 </NavLink>
+
+                <div className="flex ">
+                  <p className="text-black block px-3 py-2 rounded-md text-base font-medium">
+                    Community -
+                  </p>
+                  <a
+                    onClick={() => setIsOpen(!isOpen)}
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://chat.whatsapp.com/FktQhy24FNyDdAq2ZfNmm2"
+                    className="text-[#25D366] block py-2 rounded-md text-base font-medium"
+                  >
+                    Whatsapp
+                  </a>
+                  <a
+                    onClick={() => setIsOpen(!isOpen)}
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://discord.gg/7kpmFp2uuU"
+                    className="text-[#7289d9] block ml-2 py-2 rounded-md text-base font-medium"
+                  >
+                    Discord
+                  </a>
+                </div>
               </div>
             </div>
           )}

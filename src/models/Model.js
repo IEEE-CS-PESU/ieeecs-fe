@@ -9,13 +9,13 @@ import { NavLink } from "react-router-dom";
 const GOLDENRATIO = 1.61803398875;
 
 const dat = {
-  CurrentEvent: ["Register Now", "/eve/Inaug", true],
-  PreviousEvents: ["Explore", "/timeline", true], // prev - event - 3
-  UpcomingEvents: ["Explore", "/eve/UpcomEvents", true],
+  CurrentEvent: ["Register Now", "https://siliconrush.ieeecspesu.tech/", true],
+  PreviousEvents: ["Explore", "/eventtimeline", true], // prev - event - 3
+  UpcomingEvents: ["Explore", "/eve/UpcomEvents", false],
   Community: ["Join", "/eve/Community", true],
   Spotlight: ["Explore", "/spotlight", true],
   Recruitment: ["Join Us!", "/eve/Recruits", false],
-  Projects: ["Explore", "/eve/Projects", true],
+  Projects: ["Explore", "/projects", true],
   false: ["Explore", "/eve/`", false],
 };
 
@@ -36,15 +36,54 @@ export default function Model({ images }) {
       {vis && (
         <div className="relative z-10 top-[-200px] w-full pt-10 text-center">
           {dat[nnn][2] && (
-            <NavLink
-              to={dat[nnn][1]}
-              // target="_blank"
-              // rel="noreferrer"
-              // type="button"
-              className="px-5 py-2 bg-slate-100 rounded-3xl text-xl shadow-inner hover:bg-[#f8a219]"
-            >
-              {dat[nnn][0]}
-            </NavLink>
+            <div>
+              {nnn === "CurrentEvent" || nnn === "Community" ? (
+                <div>
+                  {nnn === "CurrentEvent" ? (
+                    <a
+                      href={dat[nnn][1]}
+                      target="_blank"
+                      rel="noreferrer"
+                      type="button"
+                      className="px-6 py-4 md:px-7 md:py-4 bg-[#98d8d9] rounded-3xl text-xl shadow-inner hover:bg-[#f8a219]"
+                    >
+                      {dat[nnn][0]}
+                    </a>
+                  ) : (
+                    <div>
+                      <a
+                        href="https://chat.whatsapp.com/FktQhy24FNyDdAq2ZfNmm2"
+                        target="_blank"
+                        rel="noreferrer"
+                        type="button"
+                        className="px-6 py-4 md:px-7 md:py-4 bg-[#25D366] rounded-3xl text-xl shadow-inner hover:bg-[#f8a219] mr-4"
+                      >
+                        Whatsapp
+                      </a>
+                      <a
+                        href="https://discord.gg/7kpmFp2uuU"
+                        target="_blank"
+                        rel="noreferrer"
+                        type="button"
+                        className="px-6 py-4 md:px-7 md:py-4 bg-[#7289d9] rounded-3xl text-xl shadow-inner hover:bg-[#f8a219] ml-4"
+                      >
+                        Discord
+                      </a>
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <NavLink
+                  to={dat[nnn][1]}
+                  // target="_blank"
+                  // rel="noreferrer"
+                  // type="button"
+                  className="px-6 py-4 md:px-7 md:py-4 bg-slate-100 rounded-3xl text-xl shadow-inner hover:bg-[#f8a219]"
+                >
+                  {dat[nnn][0]}
+                </NavLink>
+              )}
+            </div>
           )}
         </div>
       )}
