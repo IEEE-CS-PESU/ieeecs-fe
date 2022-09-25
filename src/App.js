@@ -1,23 +1,19 @@
 import React from "react";
-// import * as fireBase from "firebase/app"
-// import { firebaseConfig } from "./firebase_config"
-import Footer from "./utils/Footer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import NavBar from "./utils/NavBar";
-import Home from "./pages/Home";
-// import Events from "./Events";
-// import InstaFeed from "./Components/InstaFeed";
 import AOS from "aos";
 import "aos/dist/aos.css";
+
+import { EventFrames, Projects, Timeline, Error } from "./Components"
+import { NavBar, Footer, Test } from "./utils"
+import { Home, Spotlight } from "./pages";
+
+// import * as fireBase from "firebase/app"
+// import { firebaseConfig } from "./firebase_config"
+// import Events from "./Events";
+// import InstaFeed from "./Components/InstaFeed";
 // import Timeline from "./Components/Timeline";
-import Test from "./utils/Test";
-import EventFrames from "./Components/EventFrames";
 // import Coc from "./Components/COC";
 // import Template from "./Components/Template";
-import Error from "./Components/Error";
-import Projects from "./Components/Projects";
-import Spotlight from "./pages/Spotlight";
-import Timeline from "./Components/Timeline";
 
 AOS.init();
 
