@@ -1,5 +1,5 @@
 {
-  "name": "ieeecs-fe",
+  "name": "ieeecs-FE",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -63,5 +63,10 @@
     "postcss": "^8.4.14",
     "tailwindcss": "^3.1.4",
     "webpack-cli": "^4.10.0"
-  }
+  },
+  "description": "Shifting to Yarn",
+  "main": "index.js",
+  "repository": "https://github.com/IEEE-CS-PESU/ieeecs-fe.git",
+  "author": "Veeresh R G <veeresh.ravi@gmail.com>",
+  "license": "MIT"
 }
