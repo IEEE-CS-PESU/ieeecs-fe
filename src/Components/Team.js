@@ -20,26 +20,36 @@ const Team = React.forwardRef((props, ref) => {
 		axios
 			.get(`${url}/coreteam`)
 			.then((res) => {
-				//Ex-Members Array
-				const Xnames = [
-					"Monika",
-					"Pramod Seshasayanan P",
-					"Konkala Manisha",
-					"K S Ramalakshmi",
-					"Srividya Prasad",
-					"Anusha Naik",
-					"Akshay K B",
-					"Divyansh Raina",
-				];
+				
+				let data = res.data;
+				const currentMembers = (data) => {
+					let temp = [];
+					for (let i = 0; i < data.length; i++) {
+						if(parseInt(data[i].Id) !== -1)
+						{
+							temp.push(data[i]);
+						}
+					};
 
-				const currentMembers = (obj) => {
-					return Xnames.includes(obj.name) === false;
+				setCurrData(temp);
+
+			}
+
+				
+
+				const checkXMembers = (data) => {
+					let temp = [];
+					for (let i = 0; i < data.length; i++) {
+						if(parseInt(data[i].Id) === -1)
+						{
+							temp.push(data[i]);
+						}
+					};
+
+					setXData(temp);
 				};
 
-				const checkXMembers = (obj) => {
-					return Xnames.includes(obj.name);
-				};
-
+				
 				//Sorting Function according to id field
 				const sortedObj = res.data.sort((a, b) => {
 					return Number(a.id) - Number(b.id);
@@ -47,8 +57,11 @@ const Team = React.forwardRef((props, ref) => {
 
 				setTeam(sortedObj);
 
-				setCurrData(res.data.filter(currentMembers));
-				setXData(res.data.filter(checkXMembers));
+				currentMembers(data)
+				checkXMembers(data)
+
+				console.log(currData)
+				console.log(xData)
 			})
 			.catch((err) => {
 				console.log("Error");
@@ -78,7 +91,6 @@ const Team = React.forwardRef((props, ref) => {
 	};
 
 	// top-[-115px] md:top-[-150px]
-	console.log(currData.length);
 
 	return (
 		<>
