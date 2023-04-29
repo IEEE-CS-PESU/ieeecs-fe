@@ -48,23 +48,18 @@ export default function Spotlight({ token, ...props }) {
 
   return (
     <div className="spotlight">
+    {feeds.length ===0 ? 
+    <div className="flex items-center h-14 justify-center w-full min-h-screen bg-slate-200">
+    <Loading className="h-14 w-14" />
+    </div> : 
+    
+    <>
+
     <div id="container" className="bg-slate-200 pt-24 justify-items-center grid lg:grid-cols-4 md:grid-cols-3">      
       {
-      feeds.length ===0 ? 
-        
-        li.map((iii,i)=>{
-        return(
-        <div className="my-24 mx-auto flex justify-items-center" key={i}>
-          {i % 2 === 0 ? <div></div> : <Loading />}
-        </div>
-        )
-      })     
-      :
       
       feeds.map((feed, i) =>
         i >=0 && feed.media_type!=='VIDEO' && 
-          // (feed.media_type==='VIDEO')? <div></div> :
-          // <div className="border border-emerald-400 my-2 pr-12 mr-8 py-5" key={i}>
           
           <div className="py-5 md:mx-6 mx-8" key={i}>
             <InstaPost key={feed.id} feed={feed} />
@@ -72,6 +67,10 @@ export default function Spotlight({ token, ...props }) {
         
       )}
       </div>
+
+
+    </>}
+    
     </div>
   );
 }
