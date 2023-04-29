@@ -22,18 +22,24 @@ const Team = React.forwardRef((props, ref) => {
 			.then((res) => {
 				
 				let data = res.data;
+				let temp = [];
+				
 				const currentMembers = (data) => {
-					let temp = [];
+					
 					for (let i = 0; i < data.length; i++) {
 						if(parseInt(data[i].Id) !== -1)
 						{
 							temp.push(data[i]);
 						}
 					};
+					//sort according to id
+					temp.sort((a, b) => {
+						return Number(a.Id) - Number(b.Id);
+					});
 
-				setCurrData(temp);
+					setCurrData(temp);
 
-			}
+				}
 
 				
 
@@ -49,12 +55,12 @@ const Team = React.forwardRef((props, ref) => {
 					setXData(temp);
 				};
 
-				
 				//Sorting Function according to id field
-				const sortedObj = res.data.sort((a, b) => {
-					return Number(a.id) - Number(b.id);
+				const sortedObj = temp.sort((a, b) => {
+					return Number(a.Id) - Number(b.Id);
 				});
 
+				console.log(sortedObj);
 				setTeam(sortedObj);
 
 				currentMembers(data)
