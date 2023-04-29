@@ -60,7 +60,7 @@ function Nav() {
                   <NavLink
                     style={({ isActive }) => {
                       return {
-                        backgroundColor: isActive ? "rgb(55 65 81)" : "",
+                        backgroundColor: isActive ? "rgb(55 65 81) " : "",
                         color: isActive ? "white" : "",
                       };
                     }}
