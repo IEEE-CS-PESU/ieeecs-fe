@@ -44,7 +44,7 @@ export default function Spotlight({ token, ...props }) {
       abortController.abort();
     };
   }, [props.limit, token]);
-  let li=[1,2,3];
+  // let li=[1,2,3];
 
   return (
     <div className="spotlight">
