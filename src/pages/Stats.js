@@ -5,7 +5,7 @@ import Contributors from "../Components/Contributors"
 import Repositories from "../Components/Repositories"
 
 const octokit = new Octokit({
-    auth: "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"
+    auth: ""
 })
 
 const Stats = () => {
