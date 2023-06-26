@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 
-export default (props) => {
+let ContributorCard = (props) => {
     const [userInfo, setUserInfo] = useState(null)
     const octokit = props.octokit
     useEffect(() => {
@@ -30,3 +30,5 @@ export default (props) => {
         }
     </div>)
 }
+
+export default ContributorCard
