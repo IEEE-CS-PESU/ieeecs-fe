@@ -1,6 +1,6 @@
-import React, {useEffect, useRef, useState} from "react";
-import Hero from "../utils/Hero";
-import {Octokit, App} from "octokit"
+import React, {useEffect, useState} from "react";
+
+import {Octokit} from "octokit"
 import Contributors from "../Components/Contributors"
 import Repositories from "../Components/Repositories"
 
@@ -30,7 +30,7 @@ const Stats = () => {
         })))
         .then(() => console.log(data))
         .catch((err) => console.error(err))
-    }, [])
+    }, [data])
 
     useEffect(()=>{
         octokit.request('/orgs/{org}/members', {

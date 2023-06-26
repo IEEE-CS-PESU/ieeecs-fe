@@ -22,11 +22,10 @@ const CommitInfo = ({sha, owner, repo}) =>{
         })
         .then(res=>res.data)
         .then(res=>console.log(res))
-    }, [])
+    }, [sha, owner, repo])
 }
 
-
-export default ({cSpecific}) => {
+let RepoDetails = ({cSpecific}) => {
     const {owner, repo, sha} = useParams();
     const [details, setDetails] = useState({
         commits: null,
@@ -51,7 +50,7 @@ export default ({cSpecific}) => {
                 contributors: prev.contributors
             })
         })})
-    }, [])
+    }, [owner, repo])
 
     useEffect(() => {
         octokit.request('GET /repos/{owner}/{repo}/languages', {
@@ -75,7 +74,7 @@ export default ({cSpecific}) => {
                 contributors: prev.contributors
             })
         })})
-    }, [])
+    }, [owner, repo])
 
     useEffect(() => {
         octokit.request('GET /repos/{owner}/{repo}/contributors', {
@@ -93,7 +92,7 @@ export default ({cSpecific}) => {
                 contributors: res
             })
         })})
-    }, [])
+    }, [owner, repo])
 
     return (
         <div className="pt-36 text-white">
@@ -151,3 +150,6 @@ export default ({cSpecific}) => {
         </div>
     )
 }
+
+
+export default RepoDetails
