@@ -2,7 +2,7 @@ import React from "react";
 
 const spanClass = "text-orange-400"
 
-export default (props) => {
+let RepoDetailsCard =  (props) => {
     const commit = props.commit
     return(
         <div className="border-solid border border-white p-4 rounded-md">
@@ -23,3 +23,5 @@ export default (props) => {
         </div>
     )
 }
+
+export default RepoDetailsCard

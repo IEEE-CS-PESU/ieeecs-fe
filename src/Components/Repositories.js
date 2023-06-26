@@ -1,7 +1,7 @@
 import React from "react"
 import RepoCard from "../utils/RepoCard"
 
-export default (props) => {
+let Repositories = (props) => {
     return(
     <div className="pt-36">
         <div className="pb-4">
@@ -17,3 +17,5 @@ export default (props) => {
     </div>
     )
 }
+
+export default Repositories

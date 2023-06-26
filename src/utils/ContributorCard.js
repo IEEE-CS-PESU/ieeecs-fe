@@ -13,14 +13,14 @@ export default (props) => {
         })
         .then((res)=> res.data)
         .then((res)=> setUserInfo(res))
-    }, [])
+    }, [props.username, octokit])
 
     return(
     <div className="contributorCard border-solid border border-white rounded-lg width-1/5 max-w-xs p-4">
         {
             (userInfo)?(
                 <div className="flex width-1/5 gap-4">
-                    <img src={userInfo?userInfo.avatar_url:""} className="rounded-full w-12 h-12"></img>
+                    <img src={userInfo?userInfo.avatar_url:""} alt="User Avatar" className="rounded-full w-12 h-12"></img>
                     <div className="text-base text-white">
                         <div>{userInfo.name}</div>
                         <div className="text-base">{userInfo.login}</div>
