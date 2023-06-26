@@ -5,7 +5,7 @@ import Contributors from "../Components/Contributors"
 import Repositories from "../Components/Repositories"
 
 const octokit = new Octokit({
-    auth: "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"
+    auth: process.env.github_tok
 })
 
 const Stats = () => {

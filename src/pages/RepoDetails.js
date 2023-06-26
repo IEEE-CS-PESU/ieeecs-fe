@@ -5,7 +5,7 @@ import RepoDetailsCard from "../utils/RepoDetailsCard"
 import ContributorCard from "../utils/ContributorCard"
 
 const octokit = new Octokit({
-    auth: "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"
+    auth: process.env.github_tok
 })
 
 
