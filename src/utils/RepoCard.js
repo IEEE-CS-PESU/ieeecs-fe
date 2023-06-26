@@ -1,9 +1,8 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import git_icon from "../assets/github_repo.svg"
 import {Link} from "react-router-dom"
 
-export default (props) => {
+let RepoCard =  (props) => {
     const [repoInfo, setRepoInfo] = useState(null)
     const octokit = props.octokit
     useEffect(() => {
@@ -17,7 +16,7 @@ export default (props) => {
         .then((res)=> res.data)
         .then(res => {console.log(res); return res})
         .then((res)=> setRepoInfo(res))
-    }, [])
+    }, [octokit, props.name, props.owner])
 
     return(
     <div className="w-48">
@@ -42,3 +41,5 @@ export default (props) => {
     </div>
         )
 }
+
+export default RepoCard
