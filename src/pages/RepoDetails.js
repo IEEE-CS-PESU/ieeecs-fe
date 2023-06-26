@@ -5,17 +5,35 @@ import RepoDetailsCard from "../utils/RepoDetailsCard"
 import ContributorCard from "../utils/ContributorCard"
 
 const octokit = new Octokit({
-    auth: "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"
+    auth: "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"
 })
 
 
-export default () => {
-    const {owner, repo} = useParams();
+const CommitInfo = ({sha, owner, repo}) =>{
+    console.log(sha, owner, repo)
+    useEffect(() => {
+        octokit.request('GET /repos/{owner}/{repo}/commits/{ref}', {
+            owner: owner,
+            repo: repo,
+            ref:sha,
+            headers: {
+                accept: "application/vnd.github+json"
+            }
+        })
+        .then(res=>res.data)
+        .then(res=>console.log(res))
+    }, [])
+}
+
+
+export default ({cSpecific}) => {
+    const {owner, repo, sha} = useParams();
     const [details, setDetails] = useState({
         commits: null,
         languages: null,
         contributors: null,
     })
+
 
     useEffect(() => {
         octokit.request('GET /repos/{owner}/{repo}/commits', {
@@ -91,7 +109,7 @@ export default () => {
                             details.languages.langs.map((ele, idx)=>{
                                 return(
                                     <div>
-                                        {ele} : {details.languages.freq[idx]}
+                                        {ele} : {Math.floor((details.languages.freq[idx]/details.languages.freq.reduce(function(a, b) { return a + b; }, 0))*100) + "%"}
                                     </div>
                                 )
                             })
@@ -102,7 +120,7 @@ export default () => {
             <div className="pl-12 pb-4 text-2xl"> Contributors </div>
             <div className="pl-12 pb-4 flex flex-wrap">
                 {(details.contributors)?(
-                    <div>
+                    <div className="gap-4 flex">
                         {
                             details.contributors.map((ele, idx)=>{
                                 return(
@@ -113,14 +131,21 @@ export default () => {
                     </div>
                 ):<></>}
             </div>
-            <div className="pl-12 pb-4 text-2xl"> Commits </div>
-            <div className=" flex flex-wrap justify-center gap-4">
+            <div className="pl-12 pb-4 text-2xl"> {(cSpecific)?"Commit":"Commits"} </div>
+            <div>
                 {
-                    (details && details.commits)?(
-                        details.commits.map((ele) => {
-                            return(<RepoDetailsCard commit={ele}></RepoDetailsCard>)
-                        })
-                    ):(<></>)
+                    (cSpecific)?
+                    (<CommitInfo sha={sha} owner={owner} repo={repo}></CommitInfo>)
+                    :
+                    (<div className=" flex flex-wrap justify-center gap-4">
+                        {
+                            (details && details.commits)?(
+                                details.commits.map((ele) => {
+                                    return(<RepoDetailsCard commit={ele} repo={repo}></RepoDetailsCard>)
+                                })
+                            ):(<></>)
+                        }
+                    </div>)
                 }
             </div>
         </div>

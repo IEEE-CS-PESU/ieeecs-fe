@@ -24,7 +24,8 @@ function App() {
         <NavBar />
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route path="/:owner/:repo" element={<RepoDetails />}/>
+          <Route path="/:owner/:repo/:sha" element={<RepoDetails cSpecific={true} />}/>
+          <Route path="/:owner/:repo" element={<RepoDetails cSpecific={false}/>}/>
           <Route path="/contact" element={<Home comp={"contact"} />} />
           <Route path="/team" element={<Home comp={"team"} />} />
           <Route path="/events" element={<EventFrames />} />
@@ -34,6 +35,7 @@ function App() {
           
           {/*
             What I was thinking
+            What were you thinking?
           */}
 
           <Route path="/eve/:id" element={<Test />} />
